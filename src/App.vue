@@ -5,7 +5,7 @@ import Home from './components/Home.vue';
 import Projects from './components/Projects.vue';
 import About from './components/About.vue';
 import Contact from './components/Contact.vue';
-import Loading from "./components/loading.vue";
+import Loading from "./components/Loading.vue";
 </script>
 
 <template>
