@@ -42,7 +42,7 @@ export default {
 }
 
 .my_picture {
-    background-image: url("./assets/images/about-picBW.jpg");
+    background-image: url("/assets/images/about-picBW.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
