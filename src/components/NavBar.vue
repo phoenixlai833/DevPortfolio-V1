@@ -16,8 +16,8 @@ import FilledButton from './FilledButton.vue';
     <a href="#Contact">
       <h4>Contact</h4>
     </a>
-    <a href="./assets/resumePL_2023.pdf">
-      <FilledButton buttonText="Résumé" />
+    <a href="./resumePL_2023.pdf" target="blank">
+      <FilledButton buttonText=" Résumé" />
     </a>
   </nav>
   <nav class="small_navBar">
