@@ -16,9 +16,10 @@ import FilledButton from './FilledButton.vue';
     <a href="#Contact">
       <h4>Contact</h4>
     </a>
-    <a href="https://www.phoenixlai.dev/resumePL_2023.pdf" target="blank">
+    <a href="/assets/resumePL_2023.pdf" target="blank">
       <FilledButton buttonText=" Résumé" />
     </a>
+
   </nav>
   <nav class="small_navBar">
     <div class="small_navBar_icon" @click="show = !show" @mouseover="show = true">
@@ -66,21 +67,7 @@ export default {
     return {
       show: false,
     };
-  },
-  // methods: {
-  //   handleScroll: function (event) {
-  //     this.show = false;
-  //     console.log("okay")
-  //   }
-  // },
-
-  // mounted: function () {
-  //   window.addEventListener('scroll', this.handleScroll);
-  // },
-  // destroyed: function () {
-  //   window.removeEventListener('scroll', this.handleScroll);
-  // }
-
+  }
 };
 </script>
 
