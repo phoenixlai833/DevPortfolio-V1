@@ -1,0 +1,171 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+:root {
+  /* Sage mode */
+  --sage-theme: #d7edcc;
+
+  /* Cream mode */
+  --cream-theme: #f3f2d2;
+
+  /* Lilac mode */
+  --lilac-theme: #c6c7ed;
+
+  /* Default mode */
+  --text-color: var(black);
+  --theme-color: var(--sage-theme);
+  background-color: black;
+}
+
+html,
+body {
+  /* font-family: "Lato-Regular", Avenir, Helvetica, Arial, sans-serif; */
+  font-size: 62.5%;
+  /* line-height: 24px; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  opacity: 50%;
+}
+
+h1 {
+  font-family: "Lato-Light", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: "Lato-Light", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-family: "Lato-Black", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-family: "Lato-Black", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+p {
+  font-family: "Lato-Light", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+[type="radio"] {
+  position: fixed;
+  left: -9999px;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  padding: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.color-palette {
+  position: fixed;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  margin: 0 0 0 60px;
+  display: flex;
+}
+
+.color-palette label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.color-palette label ~ h4 {
+  margin: 0 20px 0 10px;
+}
+
+[id="sage"] ~ .page-wrapper [for="sage"] {
+  background: var(--sage-theme);
+}
+
+[id="cream"] ~ .page-wrapper [for="cream"] {
+  background: var(--cream-theme);
+}
+
+[id="lilac"] ~ .page-wrapper [for="lilac"] {
+  background: var(--lilac-theme);
+}
+
+/* CHECKBOX CHANGE STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[type="radio"]:checked ~ .page-wrapper label::before {
+  display: block;
+}
+
+[id="sage"]:checked ~ .page-wrapper {
+  --theme-color: var(--sage-theme);
+  background: var(--theme-color);
+}
+
+[id="cream"]:checked ~ .page-wrapper {
+  --theme-color: var(--cream-theme);
+  background: var(--theme-color);
+}
+
+[id="lilac"]:checked ~ .page-wrapper {
+  --theme-color: var(--lilac-theme);
+  background: var(--theme-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .page-wrapper {
+    padding: 30px;
+  }
+
+  .color-palette {
+    height: 30px;
+    margin: 0 0 0 30px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}

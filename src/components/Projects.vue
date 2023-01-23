@@ -1,0 +1,153 @@
+<script setup>
+import FilledButton from './FilledButton.vue';
+import FeaturedWork from './FeaturedWork.vue';
+import OtherProject from './OtherProject.vue';
+</script>
+
+<template>
+    <FeaturedWork directionType="row" imagePath="/assets/images/f1-Evolve.png" itemNum="01"
+        siteLink="https://evolve-website-a0510.web.app/" title="Evolve Site"
+        description="Helped build out the new design for Evolve Branding’s company site, an extension for their EvolveX app ecosystem. Learned and coded in Flutter to allow the web app to be easily scaled between desktop and mobile. Designed new pages as needed and implemented them on approval. Attended regular meetings with the founder and corresponded with fellow developers in the team throughout the process."
+        :technologies="['Flutter', 'Firebase', 'Android Studios']" seeMoreLink="https://www.google.com" />
+
+    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f2-LocalToMe.png" itemNum="02"
+        githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/"
+        title="LocalToMe"
+        description="LocalToMe is a web app that locates and provides low-income families/individuals with free or accessible food resources near their area within their budgets. Users can search for food banks on the map page, easily find out if they qualify, get directions and more. To build community, signed-in users are able to post news and events that relate to this topic. They can also customize their profiles and view saved food banks or events in the favourites page."
+        :technologies="['React', 'Next.js', 'firebase', 'Styled Components', 'Vercel']"
+        seeMoreLink="https://www.google.com" />
+
+    <FeaturedWork directionType="row" imagePath="/assets/images/f3-Dowco.png" itemNum="03"
+        siteLink="https://www.dowco.com/" title="Dowco Consultants"
+        description="Redesigned and developed a new homepage and navigation for Dowco Construction Consultants, to better showcase the company and fix any issues with the current version. Communicated directly with the client from ideation to development to understand their vision and pivot as necessary. Had to isolate the new homepage and build new navigation upon existing sites files without compromising the rest of the pages. "
+        :technologies="['HTML', 'SCSS', 'jQuery']" seeMoreLink="https://www.google.com" />
+
+    <div class="circle_spacer">
+        <div class="circle_three"></div>
+    </div>
+    <img class="cross" src="/assets/icons/cross.svg" />
+    <div class="other_projects">
+        <h3 v-motion-fade-visible>Other Projects</h3>
+        <span v-motion-fade-visible>Don’t be shy, take a look</span>
+        <div v-motion :initial="{ opacity: 0, y: 25 }" :visible="{ opacity: 1, y: 0 }" class="other_projects_container">
+            <OtherProject githubLink="https://github.com/phoenixlai833/TrashQueens"
+                siteLink="https://trash-queens-dev.vercel.app/" title="Trash Queens"
+                description="A speed based recycling game that educates people of all ages on how to recycle properly. Inspired by personal struggles, this app gamifies that experience by seeing how many correct answers the player can get in a minute. Wrong answers will slowly deteriorate the environment as a trash mountain appears."
+                :technologies="['Vue.js', 'Railway']" />
+            <OtherProject githubLink="https://github.com/phoenixlai833/Tactical-Pigeon"
+                siteLink="https://www.google.com" title="Tactical Pigeon"
+                description="Imagine being a pigeon in the big city with crumbs a plenty, it’s a battlefield out there! Tactical pigeon is a turn based strategy game based on the classic rock, paper, scissors, but this time forks and viking shields. Play on your own or connect with other players to fight for the dropped hot dog. Given a certain number or shields and forks, users have to defend themselves on their game board and attack an empty spot on the opponents. The last one standing wins."
+                :technologies="['HTML', 'CSS', 'Javascript']" />
+            <OtherProject githubLink="https://github.com/phoenixlai833/Mountain-Tea-House"
+                siteLink="https://wizardly-poincare-a73468.netlify.app/" title="Mountain Tea House"
+                description="Stemming from a love of tea, Mountain Tea House is a concept cafe and website that showcases tea culture in a beautiful way. The design language reflects a calm ambiance that evokes the nature of tea drinking, while the site doubles as an e-commerce and marketing outlet."
+                :technologies="['HTML', 'CSS', 'Bootstrap']" />
+        </div>
+        <div v-motion :initial="{ opacity: 0, y: 25 }" :visible="{ opacity: 1, y: 0 }" class="design_link">
+            <h3>For more design related work, view my</h3>&nbsp;&nbsp;
+            <FilledButton buttonText="v1 portfolio" link="https://www.phoenixlai.com/" class="v1" />
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "Projects"
+};
+</script>
+
+<style scoped>
+span {
+    font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
+    opacity: 100%;
+    font-size: 3.5rem;
+}
+
+.circle_spacer {
+    display: flex;
+    justify-content: end;
+    height: 0;
+    width: 100%;
+}
+
+.circle_three {
+    opacity: 30%;
+    width: 500px;
+    height: 250px;
+    border-radius: 60%;
+    background-size: cover;
+    animation: morph3 10s ease infinite alternate;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14405067034700314) 0%, rgba(0, 0, 0, 0) 21%, rgba(0, 0, 0, 0.13143237381703465) 70%, rgba(0, 0, 0, 0) 92%, rgba(0, 0, 0, 0.37118000788643535) 100%);
+}
+
+@keyframes morph3 {
+    0% {
+        transform: rotate(160deg) translate(-150px, 60%) scaleX(0.65) scaleY(1);
+        /* opacity: 0%; */
+    }
+
+    100% {
+        transform: rotate(165deg) translate(-150px, 60%) scaleX(1) scaleY(0.45);
+    }
+}
+
+.cross {
+    position: absolute;
+    width: 10vw;
+    transform: translate(-70%, 35%);
+}
+
+.other_projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.other_projects_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 5% 0;
+}
+
+.design_link {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    span {
+        font-size: 2.5rem;
+    }
+
+    .circle_three {
+        width: 300px;
+        height: 150px;
+    }
+
+    .v1 {
+        width: 40%;
+    }
+
+    .design_link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 75%;
+    }
+
+    .other_projects_container {
+        flex-direction: column;
+        margin: 5% 0 10% 0;
+    }
+
+    .cross {
+        width: 15vw;
+        transform: translate(-30%, 90%);
+    }
+}
+</style>
