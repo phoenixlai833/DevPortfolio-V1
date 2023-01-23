@@ -1,6 +1,7 @@
 <template>
     <div id="loading">
-        <div class="ovalLoad"></div>
+        <img src="/PL-logo.svg" />
+        <!-- <div class="ovalLoad"></div> -->
     </div>
 </template>
   
@@ -31,6 +32,48 @@ export default {
 
     100% {
         opacity: 0;
+    }
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    animation: 1s linear fadeIn, 0.5s ease-out 2s fadeOut
+}
+
+@keyframes fadeIn {
+    0% {
+        /* transform: rotate(0deg) scaleX(1) scaleY(1); */
+        opacity: 0%;
+    }
+
+    100% {
+        /* transform: rotate(180deg) scaleX(0.5) scaleY(2); */
+        opacity: 100%;
+    }
+}
+
+@keyframes squish {
+    0% {
+        transform: scaleX(1) scaleY(1);
+        opacity: 100%;
+    }
+
+    100% {
+        transform: scaleX(2) scaleY(0);
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        /* transform: rotate(0deg) scaleX(1) scaleY(1); */
+        opacity: 100%;
+    }
+
+    100% {
+        /* transform: rotate(180deg) scaleX(0.5) scaleY(2); */
+        opacity: 0%;
     }
 }
 
