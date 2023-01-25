@@ -171,10 +171,6 @@ export default {
   z-index: 1;
 }
 
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
 .border_left_top {
   position: absolute;
   top: 0;
@@ -214,7 +210,8 @@ export default {
 .container::-webkit-scrollbar {
   width: 0px;
   background: transparent;
-  /* make scrollbar transparent */
+  -webkit-appearance: none;
+  /* remove scrollbar */
 }
 
 @media only screen and (max-width: 768px) {

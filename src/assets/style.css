@@ -160,6 +160,7 @@ label {
     height: 30px;
     margin: 0 0 0 30px;
     transform: rotate(-90deg) translate(147px, -146.5px);
+    z-index: 1;
   }
 
   h1 {
