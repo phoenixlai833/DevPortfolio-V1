@@ -117,30 +117,6 @@ export default {
   }
 }
 
-.non_inter {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-.inter {
-  animation: morph 30s ease infinite;
-  transform: translateY(0px);
-  opacity: 100;
-}
-
-.blue_Sec {
-  width: 400px;
-  height: 200px;
-  background-color: blue;
-  opacity: 50%;
-  transition: all 1s;
-}
-
-.intersection {
-  background-color: red;
-  opacity: 20%;
-}
-
 .sparkle {
   width: 60px;
   margin: 30px;
@@ -193,6 +169,10 @@ export default {
   scroll-behavior: smooth;
   padding: 7%;
   z-index: 1;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
 .border_left_top {
