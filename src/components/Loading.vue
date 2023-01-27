@@ -38,7 +38,7 @@ export default {
 img {
     height: 100px;
     width: 100px;
-    animation: 1s linear fadeIn, 0.5s ease-out 2s fadeOut
+    animation: 1s linear fadeIn, 0.5s ease-out 2s fadeOut;
 }
 
 @keyframes fadeIn {
