@@ -16,7 +16,7 @@ import FilledButton from './FilledButton.vue';
     <a href="#Contact">
       <h4>Contact</h4>
     </a>
-    <a href="/resumePL_2023.pdf" target="blank">
+    <a href="/resumePL.pdf" target="blank">
       <FilledButton buttonText=" Résumé" />
     </a>
 
@@ -50,7 +50,7 @@ import FilledButton from './FilledButton.vue';
             </a>
           </div>
           <div class="right_menu_items">
-            <a href="/resumePL_2023.pdf">
+            <a href="/resumePL.pdf">
               <FilledButton buttonText="Résumé" />
             </a>
           </div>

@@ -14,7 +14,6 @@ import Loading from "./components/Loading.vue";
   <input type="radio" id="sage" name="colors" value="sage" checked>
   <input type="radio" id="cream" name="colors" value="cream">
   <input type="radio" id="lilac" name="colors" value="lilac">
-  <!-- <div class="noise"></div> -->
   <div class="page-wrapper">
     <NavBar />
     <div class="color-palette">
