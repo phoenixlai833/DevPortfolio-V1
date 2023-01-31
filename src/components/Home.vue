@@ -27,8 +27,8 @@
             <div class="home_s2_right">
                 <div class="sloganContainer">
                     <span class="slogan">I love to break and build things.</span>
-                    <h3>Welcome, I am an aspiring full-stack developer and multi-disciplinary designer with a focus on
-                        front-end devepment.</h3>
+                    <h3>Welcome, I am a full-stack web developer and experiential designer with a focus on
+                        front-end development.</h3>
                 </div>
             </div>
         </div>
