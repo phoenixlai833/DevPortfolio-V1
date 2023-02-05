@@ -5,14 +5,14 @@ import OtherProject from './OtherProject.vue';
 </script>
 
 <template>
-    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f2-LocalToMe.png" itemNum="01"
+    <FeaturedWork directionType="row" imagePath="/assets/images/f2-LocalToMe.png" itemNum="01"
         githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/"
         title="LocalToMe"
         description="LocalToMe is a web app that locates and provides low-income families/individuals with free or accessible food resources near their area within their budgets. Users can search for food banks on the map page, easily find out if they qualify, get directions and more. To build community, signed-in users are able to post news and events that relate to this topic. They can also customize their profiles and view saved food banks or events in the favourites page."
         :technologies="['React', 'Next.js', 'firebase', 'Styled Components', 'Vercel']"
         seeMoreLink="https://www.google.com" />
 
-    <FeaturedWork directionType="row" imagePath="/assets/images/f1-Evolve.png" itemNum="02"
+    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f1-Evolve.png" itemNum="02"
         siteLink="https://evolve-website-a0510.web.app/" title="Evolve Site"
         description="Helped build out the new design for Evolve Branding’s company site, an extension for their EvolveX app ecosystem. Learned and coded in Flutter to allow the web app to be easily scaled between desktop and mobile. Designed new pages as needed and implemented them on approval. Attended regular meetings with the founder and corresponded with fellow developers in the team throughout the process."
         :technologies="['Flutter', 'Firebase', 'Android Studios']" seeMoreLink="https://www.google.com" />
