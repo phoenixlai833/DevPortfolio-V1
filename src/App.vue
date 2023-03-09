@@ -1,11 +1,12 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
-import SectionTitle from './components/SectionTitle.vue';
-import Home from './components/Home.vue';
-import Projects from './components/Projects.vue';
-import About from './components/About.vue';
-import Contact from './components/Contact.vue';
+// import SectionTitle from './components/SectionTitle.vue';
+// import Home from './components/Home.vue';
+// import Projects from './components/Projects.vue';
+// import About from './components/About.vue';
+// import Contact from './components/Contact.vue';
 import Loading from "./components/Loading.vue";
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -16,27 +17,29 @@ import Loading from "./components/Loading.vue";
   <input type="radio" id="lilac" name="colors" value="lilac">
   <div class="page-wrapper">
     <NavBar />
-    <div class="color-palette">
-      <label for="sage"></label>
-      <h4>Sage</h4>
-      <label for="cream"></label>
-      <h4>cream</h4>
-      <label for="lilac"></label>
-      <h4>Lilac</h4>
-    </div>
-    <div class="container">
-      <Home />
-      <div class="diamond_spacer"><img class="diamond" src="/assets/icons/diamond.svg" /></div>
-      <SectionTitle titleText="Projects" />
-      <Projects />
-      <SectionTitle titleText="About" />
-      <About />
-      <div class="pentagon_spacer"><img class="pentagon" src="/assets/icons/pentagon.svg" /></div>
-      <SectionTitle titleText="Contact" />
-      <Contact />
-      <div class="bottom_circle_spacer">
-        <div class="circle_four"></div>
-      </div>
+
+  <div class="color-palette">
+    <label for="sage"></label>
+    <h4>Sage</h4>
+    <label for="cream"></label>
+    <h4>cream</h4>
+    <label for="lilac"></label>
+    <h4>Lilac</h4>
+  </div>
+  <div class="container">
+    <RouterView />
+    <!-- <Home />
+                                            <div class="diamond_spacer"><img class="diamond" src="/assets/icons/diamond.svg" /></div>
+                                                <SectionTitle titleText="Projects" />
+                                                <Projects />
+                                                <SectionTitle titleText="About" />
+                                                <About />
+                                                <div class="pentagon_spacer"><img class="pentagon" src="/assets/icons/pentagon.svg" /></div>
+                                                <SectionTitle titleText="Contact" />
+                                                <Contact />
+                                                <div class="bottom_circle_spacer">
+                                                  <div class="circle_four"></div>
+                                                </div> -->
     </div>
     <div class="border_left_top"></div>
     <div class="border_left_bottom"></div>
@@ -56,7 +59,8 @@ import Loading from "./components/Loading.vue";
 <script>
 export default {
   components: {
-    Loading, Home, Projects, About, Contact
+    Loading
+    // , Home, Projects, About, Contact
   },
   data() {
     return {
@@ -117,6 +121,24 @@ export default {
   }
 }
 
+.diamond_spacer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 5% 0;
+}
+
+.pentagon_spacer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.diamond,
+.pentagon {
+  width: 10vw;
+}
+
 .sparkle {
   width: 60px;
   margin: 30px;
@@ -139,25 +161,6 @@ export default {
   height: 20vh;
   width: 120px;
   display: flex;
-}
-
-
-.diamond_spacer {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  padding: 5% 0;
-}
-
-.pentagon_spacer {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
-
-.diamond,
-.pentagon {
-  width: 10vw;
 }
 
 .container {
@@ -225,6 +228,11 @@ export default {
     /* opacity: 200%; */
   }
 
+  .diamond,
+  .pentagon {
+    width: 15vw;
+  }
+
   .middle_deco_left,
   .middle_deco_right {
     width: 60px;
@@ -233,11 +241,6 @@ export default {
   .sparkle {
     width: 40px;
     margin: 10px;
-  }
-
-  .diamond,
-  .pentagon {
-    width: 15vw;
   }
 
   .border_left_top,

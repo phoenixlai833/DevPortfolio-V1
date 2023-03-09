@@ -1,9 +1,9 @@
 <script setup>
-import SectionTitle from './SectionTitle.vue';
+import SectionTitle from '../components/SectionTitle.vue';
 import Home from './Home.vue';
-import Projects from './Projects.vue';
-import About from './About.vue';
-import Contact from './Contact.vue';
+import Projects from '../components/Projects.vue';
+import About from '../components/About.vue';
+import Contact from '../components/Contact.vue';
 </script>
 
 <template>

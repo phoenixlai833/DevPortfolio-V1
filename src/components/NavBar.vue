@@ -4,6 +4,7 @@ import FilledButton from './FilledButton.vue';
 
 <template>
   <nav class="navBar">
+    <!-- <router-link to="/">Home</router-link> -->
     <a href="#Home">
       <h4>Home</h4>
     </a>
@@ -67,6 +68,11 @@ export default {
     return {
       show: false,
     };
+  },
+  methods: {
+    scrollToId(id) {
+      document.getElementById(id).scrollIntoView();
+    }
   }
 };
 </script>

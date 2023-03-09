@@ -14,10 +14,10 @@
                 <div class="title_items">
                     <h4>{{ itemNum }}&nbsp;&nbsp;&nbsp;Featured Work</h4>
                     <div class="title_items_icons">
-                        <a v-if="githubLink" :href="githubLink"> <img class="social"
-                                src="/assets/icons/github.svg" /></a>
-                        <a :href="siteLink"><img class="social" src="/assets/icons/eye.svg" /></a>
+                        <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social" src="/assets/icons/github.svg" /></a>
+                        <a v-if="siteLink" :href="siteLink" target="_blank"><img class="social" src="/assets/icons/eye.svg" /></a>
                     </div>
+                    <h4 v-if="inProgress">In-progress</h4>
                 </div>
                 <hr>
             </div>
@@ -28,6 +28,11 @@
                     {{ tech }}
                 </span>
             </div>
+            <router-link :to=seeMoreLink>
+                <div class="large_feature_link">
+                    Case Study
+                </div>
+            </router-link>
         </div>
     </div>
     <div class="small_feature_container">
@@ -55,13 +60,17 @@
                 {{ tech }}
             </span>
         </div>
+        <router-link :to=seeMoreLink>
+            <div class="small_feature_link">Case Study
+            </div>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
     name: "FeaturedWork",
-    props: ["directionType", "imagePath", "itemNum", "githubLink", "siteLink", "title", "description", "technologies", "seeMoreLink"],
+    props: ["directionType", "imagePath", "itemNum", "githubLink", "siteLink", "inProgress", "title", "description", "technologies", "seeMoreLink"],
     methods: {
         openLink(link) {
             window.open(link, "_blank");
@@ -157,8 +166,31 @@ hr {
 }
 
 .large_feature_info,
-.small_feature_info {
+.small_feature_info,
+.large_feature_link,
+.small_feature_link {
     margin-top: 5%;
+}
+
+.large_feature_link,
+.small_feature_link {
+    border: 1px solid black;
+    max-width: 40%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato-regular", Avenir, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    opacity: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.large_feature_link:hover,
+.small_feature_link:hover {
+    background-color: black;
+    color: var(--theme-color);
 }
 
 .large_feature_container {
@@ -176,6 +208,10 @@ hr {
 }
 
 @media only screen and (max-width: 768px) {
+    .small_feature_link {
+        max-width: 35%;
+    }
+
     .large_feature_info {
         display: none;
     }
@@ -200,6 +236,12 @@ hr {
 
     .large_feature_container {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .large_feature_link {
+        max-width: 20%;
     }
 }
 </style>
