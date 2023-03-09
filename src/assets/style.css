@@ -69,7 +69,8 @@ h4 {
 }
 
 p {
-  font-family: "Lato-Light", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lato-Regular", Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "Lato-Light", Avenir, Helvetica, Arial, sans-serif; */
   font-size: 1.6rem;
   line-height: 1.5;
 }

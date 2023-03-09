@@ -1,14 +1,50 @@
 import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
 import { MotionPlugin } from '@vueuse/motion'
 import './assets/style.css'
 import App from './App.vue'
 
+const router = createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    scrollBehavior(to, from, savedPosition) {
+        // let position = { x: 0, y: 0 }
+        if (to.hash) {
+            router.push("/")
+            return {
+                el: to.hash,
+            }
+        } else if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
+    },
+
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: () => import('./views/Home.vue')
+        },
+        {
+            path: '/artifact/:id',
+            name: 'Artifact',
+            component: () => import('./views/Artifact.vue'),
+            // props: (route) => ({
+            //     id: route.params.id
+            // })
+        }
+    ]
+})
 
 const app = createApp(App)
 
+app.use(router)
+
 app.use(MotionPlugin)
 
-app.mount('#app')
-// // App.use(MotionPlugin)
+// app.mount('#app')
+router.isReady().then(() => {
+    app.mount('#app')
+})
 
-// createApp(App).mount('#app')
