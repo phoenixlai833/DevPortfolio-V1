@@ -5,7 +5,7 @@ import './assets/style.css'
 import App from './App.vue'
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(),
     scrollBehavior(to, from, savedPosition) {
         // let position = { x: 0, y: 0 }
         if (to.hash) {
@@ -30,10 +30,9 @@ const router = createRouter({
             path: '/artifact/:id',
             name: 'Artifact',
             component: () => import('./views/Artifact.vue'),
-            // props: (route) => ({
-            //     id: route.params.id
-            // })
-        }
+        },
+        // { path: ':pathMatch(.*)*', component: PathNotFound },
+
     ]
 })
 
