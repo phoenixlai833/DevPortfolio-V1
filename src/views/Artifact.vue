@@ -6,7 +6,7 @@ import ArtifactRight from '../components/ArtifactRight.vue';
     <div id="artifact">
         <div class="leftside">
             <!-- <div class="back_arrow_container" @click="$router.go(-1)"><img class="back_arrow"
-                                            src="/assets/icons/arrowLeft.svg" /></div> -->
+                                                                    src="/assets/icons/arrowLeft.svg" /></div> -->
             <a href="#Projects">
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
@@ -66,7 +66,7 @@ export default {
             artifact: null
         }
     },
-    created() {
+    mounted() {
         this.artifact = this.$route.params.id
     }
 };
