@@ -5,7 +5,27 @@ import './assets/style.css'
 import App from './App.vue'
 
 const router = createRouter({
+    mode: 'history',
+    base: process.env.BASE_URL,
     history: createWebHistory(),
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: () => import('./views/Home.vue')
+        },
+        {
+            path: '/artifact/:id',
+            name: 'Artifact',
+            component: () => import('./views/Artifact.vue')
+        },
+        // {
+        //     path: "/artifact/*",
+        //     name: "NotFound",
+        //     component: () => import('./views/NotFound.vue')
+        // }
+
+    ],
     scrollBehavior(to, from, savedPosition) {
         // let position = { x: 0, y: 0 }
         if (to.hash) {
@@ -19,21 +39,6 @@ const router = createRouter({
             return { x: 0, y: 0 }
         }
     },
-
-    routes: [
-        {
-            path: '/',
-            name: 'Home',
-            component: () => import('./views/Home.vue')
-        },
-        {
-            path: '/artifact/:id',
-            name: 'Artifact',
-            component: () => import('./views/Artifact.vue'),
-        },
-        // { path: ':pathMatch(.*)*', component: PathNotFound },
-
-    ]
 })
 
 const app = createApp(App)

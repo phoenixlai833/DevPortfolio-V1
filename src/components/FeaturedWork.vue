@@ -14,8 +14,10 @@
                 <div class="title_items">
                     <h4>{{ itemNum }}&nbsp;&nbsp;&nbsp;Featured Work</h4>
                     <div class="title_items_icons">
-                        <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social" src="/assets/icons/github.svg" /></a>
-                        <a v-if="siteLink" :href="siteLink" target="_blank"><img class="social" src="/assets/icons/eye.svg" /></a>
+                        <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social"
+                                src="/assets/icons/github.svg" /></a>
+                        <a v-if="siteLink" :href="siteLink" target="_blank"><img class="social"
+                                src="/assets/icons/eye.svg" /></a>
                     </div>
                     <h4 v-if="inProgress">In-progress</h4>
                 </div>
@@ -29,7 +31,7 @@
                 </span>
             </div>
             <router-link :to=seeMoreLink>
-                <div class="large_feature_link">
+                <div class="large_feature_link" @click="this.$router.push(seeMoreLink)">
                     Case Study
                 </div>
             </router-link>
