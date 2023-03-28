@@ -6,7 +6,7 @@ import App from './App.vue'
 
 const router = createRouter({
     mode: 'history',
-    base: process.env.BASE_URL,
+    base: import.meta.env.BASE_URL,
     history: createWebHistory(),
     routes: [
         {
@@ -17,13 +17,17 @@ const router = createRouter({
         {
             path: '/artifact/:id',
             name: 'Artifact',
-            component: () => import('./views/Artifact.vue')
+            component: () => import('./views/Artifact.vue'),
+            // beforeEnter(to) {
+            //     const id = parseInt(to.params.id)
+            //     // can use json and loop through here to check is exists but only 4 for its fine
+            // }
         },
-        // {
-        //     path: "/artifact/*",
-        //     name: "NotFound",
-        //     component: () => import('./views/NotFound.vue')
-        // }
+        {
+            path: "/:pathMatch(.*)*",
+            name: "NotFound",
+            component: () => import('./views/NotFound.vue')
+        }
 
     ],
     scrollBehavior(to, from, savedPosition) {

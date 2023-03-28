@@ -1,13 +1,15 @@
 <script setup>
 import ArtifactRight from '../components/ArtifactRight.vue';
+import NotFound from './NotFound.vue';
 import { useRoute } from "vue-router";
 </script>
 
 <template>
-    <div id="artifact">
+    <div id="artifact"
+        v-if="artifactId == 'LocalToMe' || artifactId == 'EvolveSite' || artifactId == 'DowcoConsultants' || artifactId == 'InnotaTech'">
         <div class="leftside">
             <!-- <div class="back_arrow_container" @click="$router.go(-1)"><img class="back_arrow"
-                                                                                                                        src="/assets/icons/arrowLeft.svg" /></div> -->
+                                                                                                                                                                                                            src="/assets/icons/arrowLeft.svg" /></div> -->
             <a href="#Projects">
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
@@ -25,10 +27,17 @@ import { useRoute } from "vue-router";
                     githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/"
                     context="LocalToMe is a web app that locates and provides low-income families/individuals with free or accessible food resources near their area within their budgets. Users can search for food banks on the map page, easily find out if they qualify, get directions and more. To build community, signed-in users are able to post news and events that relate to this topic. They can also customize their profiles and view saved food banks or events in the favourites page."
                     :technologies="['React', 'Next.js', 'firebase', 'Styled Components', 'Vercel']" demoVideo=""
-                    challengeBig="" challengeSmall="" solutionBig="" solutionSmall="" img1=""
-                    img2="/assets/images/f3-Dowco.png" img3="" img4="" takeawaysBig="" takeawaysSmall="" niceToHaves=""
-                    prj1="/assets/images/f1-Evolve.png" prj2="/assets/images/f3-Dowco.png"
-                    prj3="/assets/images/f1-Evolve.png" />
+                    challengeBig="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    challengeSmall="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    solutionBig="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    solutionSmall="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    img1="/assets/images/f2-LocalToMe.png" img2="/assets/images/f2-LocalToMe.png"
+                    img3="/assets/images/f2-LocalToMe.png" img4="/assets/images/f2-LocalToMe.png"
+                    takeawaysBig="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    takeawaysSmall="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    niceToHaves="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    prj1="/assets/images/f4-InnotaTech.png" prj2="/assets/images/f1-Evolve.png"
+                    prj3="/assets/images/f3-Dowco.png" />
             </div>
             <div v-if="artifactId == 'EvolveSite'">
                 <ArtifactRight heroImage="/assets/images/f1-Evolve.png" siteLink="https://evolve-website-a0510.web.app/"
@@ -56,6 +65,9 @@ import { useRoute } from "vue-router";
             </div>
 
         </div>
+    </div>
+    <div v-else>
+        <NotFound />
     </div>
 </template>
 
@@ -110,7 +122,7 @@ span {
 
 .rightside {
     width: 70%;
-    background-color: var(--text-color);
+    /* background-color: var(--text-color); */
 }
 
 @media only screen and (max-width: 900px) {
@@ -134,5 +146,6 @@ span {
         width: 100%;
         height: 70vh;
     }
+
 }
 </style>

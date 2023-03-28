@@ -12,8 +12,8 @@ import { RouterView } from 'vue-router'
 <template>
   <div class="noise"></div>
   <Loading v-if="isLoading"></Loading>
-  <input type="radio" id="sage" name="colors" value="sage" checked>
-  <input type="radio" id="cream" name="colors" value="cream">
+  <input type="radio" id="sage" name="colors" value="sage">
+  <input type="radio" id="cream" name="colors" value="cream" checked>
   <input type="radio" id="lilac" name="colors" value="lilac">
   <div class="page-wrapper">
     <NavBar />
@@ -29,17 +29,17 @@ import { RouterView } from 'vue-router'
   <div class="container">
     <RouterView />
     <!-- <Home />
-                                            <div class="diamond_spacer"><img class="diamond" src="/assets/icons/diamond.svg" /></div>
-                                                <SectionTitle titleText="Projects" />
-                                                <Projects />
-                                                <SectionTitle titleText="About" />
-                                                <About />
-                                                <div class="pentagon_spacer"><img class="pentagon" src="/assets/icons/pentagon.svg" /></div>
-                                                <SectionTitle titleText="Contact" />
-                                                <Contact />
-                                                <div class="bottom_circle_spacer">
-                                                  <div class="circle_four"></div>
-                                                </div> -->
+                <div class="diamond_spacer"><img class="diamond" src="/assets/icons/diamond.svg" /></div>
+                    <SectionTitle titleText="Projects" />
+                    <Projects />
+                    <SectionTitle titleText="About" />
+                    <About />
+                    <div class="pentagon_spacer"><img class="pentagon" src="/assets/icons/pentagon.svg" /></div>
+                    <SectionTitle titleText="Contact" />
+                    <Contact />
+                    <div class="bottom_circle_spacer">
+                      <div class="circle_four"></div>
+                    </div> -->
     </div>
     <div class="border_left_top"></div>
     <div class="border_left_bottom"></div>
