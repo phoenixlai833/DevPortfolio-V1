@@ -29,7 +29,7 @@
         </div>
         <div class="demo_video"></div>
         <div v-if="challengeBig && challengeSmall" class="challenge">
-            <h4>challenge</h4>
+            <h4>Solution</h4>
             <div class="challenge_description">
                 <p class="overviews">{{ challengeBig }}</p>
                 <p>{{ challengeSmall }}</p>
@@ -37,7 +37,7 @@
         </div>
         <hr v-if="challengeBig && challengeSmall && solutionBig && solutionSmall">
         <div v-if="solutionBig && solutionSmall" class="solution">
-            <h4>Solution</h4>
+            <h4>Challenges</h4>
             <div class="solution_description">
                 <p class="overviews">{{ solutionBig }}</p>
                 <p>{{ solutionSmall }}</p>
