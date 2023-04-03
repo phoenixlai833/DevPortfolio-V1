@@ -6,9 +6,9 @@
     <div class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
     </div>
     <!-- <div class="img-wrapper">
-                                                                                                                                                                                                        <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                    </div> -->
+                                                                                                                                                                                                                        <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                    </div> -->
         <div class="link_icons">
             <h4 v-if="inProgress">In-progress</h4>
             <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social"
@@ -47,10 +47,10 @@
             <div class="image_row">
                 <div class="img1" :style="{ backgroundImage: 'url(' + img1 + ')' }"></div>
                 <div class="img2" :style="{ backgroundImage: 'url(' + img2 + ')' }"></div>
-                <div class="img3" :style="{ backgroundImage: 'url(' + img2 + ')' }"></div>
+                <div class="img3" :style="{ backgroundImage: 'url(' + img3 + ')' }"></div>
             </div>
-            <div class="img3_small" :style="{ backgroundImage: 'url(' + img2 + ')' }"></div>
-            <div class="img4" :style="{ backgroundImage: 'url(' + img2 + ')' }"></div>
+            <div class="img3_small" :style="{ backgroundImage: 'url(' + img3 + ')' }"></div>
+            <div class="img4" :style="{ backgroundImage: 'url(' + img4 + ')' }"></div>
         </div>
         <div v-if="takeawaysBig && takeawaysSmall" class="takeaways">
             <h4>Takeaways</h4>
@@ -83,9 +83,9 @@
                 </div>
                 <div class="img-wrapper">
                     <div class="prj3" :style="{ backgroundImage: 'url(' + prj3 + ')' }"></div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> -->
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div> -->
     </div>
 </template>
 
