@@ -1,4 +1,4 @@
-<script >
+<script setup>
 import SectionTitle from '../components/SectionTitle.vue';
 import Home from './Home.vue';
 import Projects from '../components/Projects.vue';

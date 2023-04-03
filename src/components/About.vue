@@ -5,25 +5,19 @@
             <div class="my_picture"></div>
         </div>
         <div class="about_description">
-            <p>Hello! My name is Phoenix and I am fascinated by how people and technology interact. Curious about the
-                mechanics behind the things we use daily and the digital worlds created by them.
+            <p>Greetings! I'm Phoenix, and I'm deeply interested in the interaction between people and technology,
+                particularly the mechanics behind the digital worlds we encounter every day.
                 <br />
                 <br />
-                My background may seem unconventional, starting as a industrial designer to then experiential design,
-                and
-                now
-                a developer. Throughout these experiences, I learned many valuable skills and lessons that I carry
-                forward
-                with me.<b> I want to bridge my knowledge of design and code to create more beautiful user centered
-                    products
-                    and experiences. </b>
+                Despite my unconventional
+                background, transitioning from industrial design to experiential design and now to development, I have
+                gained invaluable skills and insights that inform my work. <b>My goal is to bridge my knowledge of code and
+                    design to create user-centered products and experiences that are both functional and beautiful.</b>
                 <br />
                 <br />
-                Now entering my final semester, I have the ability to build complex applications and websites that I
-                never
-                would have dreamed I could do. The limit is the imagination, coding is creative, and I learned that
-                there’s
-                always more to learn.
+                As I finish my
+                final semester, I'm excited to explore the endless possibilities of coding, where creativity has no bounds
+                and there is always more to learn.
             </p>
         </div>
     </div>
@@ -78,7 +72,7 @@ export default {
 
 .about {
     display: flex;
-    align-items: center;
+    align-items: start;
     padding: 5%;
     gap: 10%;
     margin-top: 5%;
