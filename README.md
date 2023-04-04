@@ -1,6 +1,6 @@
 # Personal Website V1
 
-A digital showcase of my development work. I wanted to experiment with the design to convey my personality.~
+A digital showcase of my development work. I wanted to experiment to push technical and creative boundaries.~
 
 
 ## Built with:
