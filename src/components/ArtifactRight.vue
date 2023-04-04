@@ -3,19 +3,19 @@
 
 <template>
     <div id="ArtifactRight">
-    <div class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+    <div v-motion-fade class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
     </div>
     <!-- <div class="img-wrapper">
-                                                                                                                                                                                                                                            <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
-                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                        </div> -->
-        <div class="link_icons">
+                                                                                                                                                                                                                                                                            <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                        </div> -->
+        <div v-motion-fade class="link_icons">
             <h4 v-if="inProgress">In-progress</h4>
             <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social"
                     src="/assets/icons/github.svg" /></a>
             <a v-if="siteLink" :href="siteLink" target="_blank"><img class="social" src="/assets/icons/eye.svg" /></a>
         </div>
-        <div class="context">
+        <div v-motion-fade-visible class="context">
             <h4>Context</h4>
 
             <div class="context_description">
@@ -27,29 +27,29 @@
                 </div>
             </div>
         </div>
-        <div class="demo_video">
+        <div v-motion-fade-visible class="demo_video">
             <iframe width="100%" height="100%" :src="demoVideo" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                    </iframe> -->
+                                                    </iframe> -->
         </div>
-        <div v-if="challengeBig && challengeSmall" class="challenge">
+        <div v-motion-fade-visible v-if="challengeBig && challengeSmall" class="challenge">
             <h4>Solution</h4>
             <div class="challenge_description">
                 <p class="overviews">{{ challengeBig }}</p>
                 <p>{{ challengeSmall }}</p>
             </div>
         </div>
-        <hr v-if="challengeBig && challengeSmall && solutionBig && solutionSmall">
-        <div v-if="solutionBig && solutionSmall" class="solution">
+        <hr v-motion-fade-visible v-if="challengeBig && challengeSmall && solutionBig && solutionSmall">
+        <div v-motion-fade-visible v-if="solutionBig && solutionSmall" class="solution">
             <h4>Challenges</h4>
             <div class="solution_description">
                 <p class="overviews">{{ solutionBig }}</p>
                 <p>{{ solutionSmall }}</p>
             </div>
         </div>
-        <div v-if="img1 && img2 && img3 && img4" class="image_gallery">
+        <div v-motion-fade-visible v-if="img1 && img2 && img3 && img4" class="image_gallery">
             <div class="image_row">
                 <div class="img1" :style="{ backgroundImage: 'url(' + img1 + ')' }"></div>
                 <div class="img2" :style="{ backgroundImage: 'url(' + img2 + ')' }"></div>
@@ -58,14 +58,14 @@
             <div class="img3_small" :style="{ backgroundImage: 'url(' + img3 + ')' }"></div>
             <div class="img4" :style="{ backgroundImage: 'url(' + img4 + ')' }"></div>
         </div>
-        <div v-if="takeawaysBig && takeawaysSmall" class="takeaways">
+        <div v-motion-fade-visible v-if="takeawaysBig && takeawaysSmall" class="takeaways">
             <h4>Takeaways</h4>
             <div class="takeaways_description">
                 <p class="overviews">{{ takeawaysBig }}</p>
                 <p>{{ takeawaysSmall }}</p>
             </div>
         </div>
-        <div v-if="niceToHaves" class="nicetohaves">
+        <div v-motion-fade-visible v-if="niceToHaves" class="nicetohaves">
             <h4>Nice To Haves</h4>
             <div class="nicetohaves_description">
                 <p>{{ niceToHaves }}</p>
@@ -89,9 +89,9 @@
                 </div>
                 <div class="img-wrapper">
                     <div class="prj3" :style="{ backgroundImage: 'url(' + prj3 + ')' }"></div>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div> -->
+                                                                                                                                                            </div>
+                                                                                                                                                        </div>
+                                                                                                                                                    </div> -->
     </div>
 </template>
 

@@ -7,9 +7,9 @@ import { useRoute } from "vue-router";
 <template>
     <div id="artifact"
         v-if="artifactId == 'LocalToMe' || artifactId == 'EvolveSite' || artifactId == 'DowcoConsultants' || artifactId == 'InnotaTechnologies'">
-        <div class="leftside">
+        <div v-motion-fade class="leftside">
             <!-- <div class="back_arrow_container" @click="$router.go(-1)"><img class="back_arrow"
-                                                                                                                                                                                                                                                                                                                                                                                                src="/assets/icons/arrowLeft.svg" /></div> -->
+                                                                                                                                                                                                                                                                                                                                                                                                        src="/assets/icons/arrowLeft.svg" /></div> -->
             <a href="#Projects">
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
