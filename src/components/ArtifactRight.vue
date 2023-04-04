@@ -6,16 +6,16 @@
     <div v-motion-fade class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
     </div>
     <!-- <div class="img-wrapper">
-                                                                                                                                                                                                                                                                            <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
-                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                        </div> -->
+                                                                                                                                                                                                                                                                                <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                            </div> -->
         <div v-motion-fade class="link_icons">
             <h4 v-if="inProgress">In-progress</h4>
             <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social"
                     src="/assets/icons/github.svg" /></a>
             <a v-if="siteLink" :href="siteLink" target="_blank"><img class="social" src="/assets/icons/eye.svg" /></a>
         </div>
-        <div v-motion-fade-visible class="context">
+        <div class="context">
             <h4>Context</h4>
 
             <div class="context_description">
@@ -32,7 +32,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                                                    </iframe> -->
+                                                        </iframe> -->
         </div>
         <div v-motion-fade-visible v-if="challengeBig && challengeSmall" class="challenge">
             <h4>Solution</h4>
@@ -89,9 +89,9 @@
                 </div>
                 <div class="img-wrapper">
                     <div class="prj3" :style="{ backgroundImage: 'url(' + prj3 + ')' }"></div>
+                                                                                                                                                                </div>
                                                                                                                                                             </div>
-                                                                                                                                                        </div>
-                                                                                                                                                    </div> -->
+                                                                                                                                                        </div> -->
     </div>
 </template>
 

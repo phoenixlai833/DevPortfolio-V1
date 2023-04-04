@@ -32,7 +32,7 @@ import OtherProject from './OtherProject.vue';
         <h3 v-motion-fade-visible>Other Projects</h3>
         <span v-motion-fade-visible>Don’t be shy, take a look</span>
         <div v-motion-fade-visible class="other_projects_container">
-            <OtherProject siteLink="https://cut-soap-production.up.railway.app/" title="Concord Chathub"
+            <OtherProject siteLink="https://caring-library-production.up.railway.app/" title="Concord Chathub"
                 description="Discord clone built with SignalR to practice real-time web applications. Users can create, join rooms, and view other users in the room. They can also send messages and view them in real time."
                 :technologies="['C#', '.NET', 'SignalR', 'PostgreSQL', 'React', 'Tailwind']" />
             <OtherProject githubLink="https://github.com/phoenixlai833/TrashQueens"
