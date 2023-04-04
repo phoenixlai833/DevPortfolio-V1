@@ -5,25 +5,25 @@ import OtherProject from './OtherProject.vue';
 </script>
 
 <template>
-    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f4-InnotaTech.png" itemNum="01" title="Innota Tech"
-        inProgress="true"
+    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f4-InnotaTech.png" itemNum="01"
+        title="Innota Technologies" inProgress="true"
         description="Developed a proof of concept educational app for Innota Technologies to showcase their product to investors. Worked on phase 1 which focuses on note taking for students where they can upload and highlight large pdfs, create, edit, and connect notes, draw, take pdf images and more in a split screen Figma-like interface. Worked in a student group of 4 with weekly sprints to rapidly iterate and build out the clients vision."
-        :technologies="['React', 'MVC', 'MongoDB', 'Docker']" seeMoreLink="/artifact/InnotaTech" />
+        :technologies="['React', 'MVC', 'MongoDB', 'Docker']" seeMoreLink="/artifact/InnotaTechnologies" />
 
-    <FeaturedWork directionType="row" imagePath="/assets/images/f2-LocalToMe.png" itemNum="02"
+    <FeaturedWork directionType="row" imagePath="/assets/images/f3-Dowco.png" itemNum="02" siteLink="https://www.dowco.com/"
+        title="Dowco Consultants"
+        description="Redesigned and developed a new homepage and navigation for Dowco Construction Consultants, to better showcase the company and fix any issues with the current version. Communicated directly with the client from ideation to development to understand their vision and pivot as necessary. Had to isolate the new homepage and build new navigation upon existing sites files without compromising the rest of the pages."
+        :technologies="['HTML', 'SCSS', 'jQuery']" seeMoreLink="/artifact/DowcoConsultants" />
+
+    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f2-LocalToMe.png" itemNum="03"
         githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/" title="LocalToMe"
         description="LocalToMe is a web app that locates and provides low-income families/individuals with free or accessible food resources near their area within their budgets. Users can search for food banks on the map page, easily find out if they qualify, get directions and more. To build community, signed-in users are able to post news and events that relate to this topic. They can also customize their profiles and view saved food banks or events in the favourites page."
         :technologies="['React', 'Next.js', 'firebase', 'Styled Components', 'Vercel']" seeMoreLink="/artifact/LocalToMe" />
 
-    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f1-Evolve.png" itemNum="03"
+    <FeaturedWork directionType="row" imagePath="/assets/images/f1-Evolve.png" itemNum="04"
         siteLink="https://evolve-website-a0510.web.app/" title="Evolve Site"
-        description="Helped build out the new design for Evolve Branding’s company site, an extension for their EvolveX app ecosystem. Learned and coded in Flutter to allow the web app to be easily scaled between desktop and mobile. Designed new pages as needed and implemented them on approval. Attended regular meetings with the founder and corresponded with fellow developers in the team throughout the process."
+        description="Helped build out the new design for Evolve Branding’s company site, an extension for their EvolveX app ecosystem. Learned and used Flutter to allow the web app to be easily scaled between desktop and mobile. Designed new pages as needed and implemented them on approval. Attended regular meetings with the founder and corresponded with fellow developers in the team throughout the process."
         :technologies="['Flutter', 'Firebase', 'Android Studios']" seeMoreLink="/artifact/EvolveSite" />
-
-    <FeaturedWork directionType="row" imagePath="/assets/images/f3-Dowco.png" itemNum="04" siteLink="https://www.dowco.com/"
-        title="Dowco Consultants"
-        description="Redesigned and developed a new homepage and navigation for Dowco Construction Consultants, to better showcase the company and fix any issues with the current version. Communicated directly with the client from ideation to development to understand their vision and pivot as necessary. Had to isolate the new homepage and build new navigation upon existing sites files without compromising the rest of the pages."
-        :technologies="['HTML', 'SCSS', 'jQuery']" seeMoreLink="/artifact/DowcoConsultants" />
     <div class="circle_spacer">
         <div class="circle_three"></div>
     </div>
@@ -31,7 +31,7 @@ import OtherProject from './OtherProject.vue';
     <div class="other_projects">
         <h3 v-motion-fade-visible>Other Projects</h3>
         <span v-motion-fade-visible>Don’t be shy, take a look</span>
-        <div v-motion :initial="{ opacity: 0, y: 25 }" :visible="{ opacity: 1, y: 0 }" class="other_projects_container">
+        <div v-motion-fade-visible class="other_projects_container">
             <OtherProject siteLink="https://cut-soap-production.up.railway.app/" title="Concord Chathub"
                 description="Discord clone built with SignalR to practice real-time web applications. Users can create, join rooms, and view other users in the room. They can also send messages and view them in real time."
                 :technologies="['C#', '.NET', 'SignalR', 'PostgreSQL', 'React', 'Tailwind']" />
@@ -45,7 +45,7 @@ import OtherProject from './OtherProject.vue';
                 :technologies="['HTML', 'CSS', 'Javascript']" />
 
         </div>
-        <div v-motion :initial="{ opacity: 0, y: 25 }" :visible="{ opacity: 1, y: 0 }" class="design_link">
+        <div v-motion-fade-visible class="design_link">
             <h3>For more design related work, view my</h3>&nbsp;&nbsp;
             <FilledButton buttonText="v1 portfolio" link="https://www.phoenixlai.com/" class="v1" />
         </div>

@@ -1,6 +1,5 @@
 <template>
-    <div v-motion :initial="{ opacity: 0, y: 25 }" :visible="{ opacity: 1, y: 0 }" class="large_feature_container"
-        :style="{ flexDirection: directionType }">
+    <div v-motion-fade-visible class="large_feature_container" :style="{ flexDirection: directionType }">
         <div class="image_container">
             <div class="image_border" v-on:click="openLink(siteLink)"></div>
             <div class="img-wrapper">
@@ -120,6 +119,7 @@ span {
 
 .image_border:hover {
     border: 25px solid var(--theme-color);
+    cursor: pointer;
 }
 
 .img-wrapper {

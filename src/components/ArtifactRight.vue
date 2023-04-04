@@ -6,9 +6,9 @@
     <div class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
     </div>
     <!-- <div class="img-wrapper">
-                                                                                                                                                                                                                        <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
-                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                    </div> -->
+                                                                                                                                                                                                                                            <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div> -->
         <div class="link_icons">
             <h4 v-if="inProgress">In-progress</h4>
             <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social"
@@ -27,7 +27,13 @@
                 </div>
             </div>
         </div>
-        <div class="demo_video"></div>
+        <div class="demo_video">
+            <iframe width="100%" height="100%" :src="demoVideo" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe> -->
+        </div>
         <div v-if="challengeBig && challengeSmall" class="challenge">
             <h4>Solution</h4>
             <div class="challenge_description">
@@ -83,9 +89,9 @@
                 </div>
                 <div class="img-wrapper">
                     <div class="prj3" :style="{ backgroundImage: 'url(' + prj3 + ')' }"></div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div> -->
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div> -->
     </div>
 </template>
 
@@ -213,8 +219,8 @@ hr {
 .demo_video {
     width: 100%;
     height: 50vh;
-    background-color: black;
-    opacity: 25%;
+    /* background-color: black; */
+    /* opacity: 25%; */
 }
 
 .tech {
