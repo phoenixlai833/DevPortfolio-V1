@@ -9,7 +9,7 @@ import { useRoute } from "vue-router";
         v-if="artifactId == 'LocalToMe' || artifactId == 'EvolveSite' || artifactId == 'DowcoConsultants' || artifactId == 'InnotaTechnologies'">
         <div v-motion-fade class="leftside">
             <!-- <div class="back_arrow_container" @click="$router.go(-1)"><img class="back_arrow"
-                                                                                                                                                                                                                                                                                                                                                                                                        src="/assets/icons/arrowLeft.svg" /></div> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                src="/assets/icons/arrowLeft.svg" /></div> -->
             <a href="#Projects">
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
@@ -109,6 +109,23 @@ export default {
 </script>
 
 <style scoped>
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
 #artifact {
     display: flex;
     flex-direction: row;

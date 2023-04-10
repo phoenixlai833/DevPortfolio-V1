@@ -10,15 +10,15 @@ import OtherProject from './OtherProject.vue';
         description="Developed a proof of concept educational app for Innota Technologies to showcase their product to investors. Worked on phase 1 which focuses on note taking for students where they can upload and highlight large pdfs, create, edit, and connect notes, draw, take pdf images and more in a split screen Figma-like interface. Worked in a student group of 4 with weekly sprints to rapidly iterate and build out the clients vision."
         :technologies="['React', 'MVC', 'MongoDB', 'Docker']" seeMoreLink="/artifact/InnotaTechnologies" />
 
-    <FeaturedWork directionType="row" imagePath="/assets/images/f3-Dowco.png" itemNum="02" siteLink="https://www.dowco.com/"
-        title="Dowco Consultants"
-        description="Redesigned and developed a new homepage and navigation for Dowco Construction Consultants, to better showcase the company and fix any issues with the current version. Communicated directly with the client from ideation to development to understand their vision and pivot as necessary. Had to isolate the new homepage and build new navigation upon existing sites files without compromising the rest of the pages."
-        :technologies="['HTML', 'SCSS', 'jQuery']" seeMoreLink="/artifact/DowcoConsultants" />
-
-    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f2-LocalToMe.png" itemNum="03"
+    <FeaturedWork directionType="row" imagePath="/assets/images/f2-LocalToMe.png" itemNum="02"
         githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/" title="LocalToMe"
         description="LocalToMe is a web app that locates and provides low-income families/individuals with free or accessible food resources near their area within their budgets. Users can search for food banks on the map page, easily find out if they qualify, get directions and more. To build community, signed-in users are able to post news and events that relate to this topic. They can also customize their profiles and view saved food banks or events in the favourites page."
         :technologies="['React', 'Next.js', 'firebase', 'Styled Components', 'Vercel']" seeMoreLink="/artifact/LocalToMe" />
+
+    <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f3-Dowco.png" itemNum="03"
+        siteLink="https://www.dowco.com/" title="Dowco Consultants"
+        description="Redesigned and developed a new homepage and navigation for Dowco Construction Consultants, to better showcase the company and fix any issues with the current version. Communicated directly with the client from ideation to development to understand their vision and pivot as necessary. Had to isolate the new homepage and build new navigation upon existing sites files without compromising the rest of the pages."
+        :technologies="['HTML', 'SCSS', 'JavaScript', 'jQuery', 'PHP']" seeMoreLink="/artifact/DowcoConsultants" />
 
     <FeaturedWork directionType="row" imagePath="/assets/images/f1-Evolve.png" itemNum="04"
         siteLink="https://evolve-website-a0510.web.app/" title="Evolve Site"
