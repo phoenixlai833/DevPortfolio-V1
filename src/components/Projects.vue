@@ -13,7 +13,7 @@ import OtherProject from './OtherProject.vue';
     <FeaturedWork directionType="row" imagePath="/assets/images/f2-LocalToMe.png" itemNum="02"
         githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/" title="LocalToMe"
         description="LocalToMe is a web app that locates and provides low-income families/individuals with free or accessible food resources near their area within their budgets. Users can search for food banks on the map page, easily find out if they qualify, get directions and more. To build community, signed-in users are able to post news and events that relate to this topic. They can also customize their profiles and view saved food banks or events in the favourites page."
-        :technologies="['React', 'Next.js', 'firebase', 'Styled Components', 'Vercel']" seeMoreLink="/artifact/LocalToMe" />
+        :technologies="['React', 'Next.js', 'Firebase', 'Styled Components', 'Vercel']" seeMoreLink="/artifact/LocalToMe" />
 
     <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f3-Dowco.png" itemNum="03"
         siteLink="https://www.dowco.com/" title="Dowco Consultants"
