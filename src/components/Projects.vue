@@ -5,8 +5,9 @@ import OtherProject from './OtherProject.vue';
 </script>
 
 <template>
+    <!-- inProgress="true"  -->
     <FeaturedWork directionType="row-reverse" imagePath="/assets/images/f4-InnotaTech.png" itemNum="01"
-        title="Innota Technologies" inProgress="true"
+        siteLink="https://innota-tech.up.railway.app/" title="Innota Technologies"
         description="Developed a proof of concept educational app for Innota Technologies to showcase their product to investors. Worked on phase 1 which focuses on note taking for students where they can upload and highlight large pdfs, create, edit, and connect notes, draw, take pdf images and more in a split screen Figma-like interface. Worked in a student group of 4 with weekly sprints to rapidly iterate and build out the clients vision."
         :technologies="['React', 'MVC', 'MongoDB', 'Docker']" seeMoreLink="/artifact/InnotaTechnologies" />
 
