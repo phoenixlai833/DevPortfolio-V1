@@ -13,12 +13,12 @@ import Contact from '../components/Contact.vue';
                 <div class="name_block">
                     <span class="my_name">PHOENIX</span>
                     <div class="name_bottom">
-                        <span class="my_name">LAI</span> <span class="my_title">Designer & Developer</span>
+                        <span class="my_name">LAI</span> <span class="my_title">Developer & Designer</span>
                     </div>
                 </div>
                 <div class="small_name_block">
                     <span class="small_my_name">PHOENIX LAI</span>
-                    <span class="small_my_title">Designer & Developer</span>
+                    <span class="small_my_title">Developer & Designer</span>
                 </div>
             </div>
             <div class="home_s1_right">
