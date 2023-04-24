@@ -92,7 +92,7 @@ h4 {
 span.feature_work_role {
     font-size: 1.6rem;
     /* opacity: 50%; */
-    font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
+    font-family: "Lato-Regular", Avenir, Helvetica, Arial, sans-serif;
 
 }
 

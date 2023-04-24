@@ -1,5 +1,5 @@
 <template>
-    <div v-motion-fade-visible class="section">
+    <div class="section">
         <div class="oval"></div>
         <h3 v-bind:id="titleText">{{ titleText }}</h3>
     </div>

@@ -14,10 +14,18 @@ import { useRoute } from "vue-router";
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
             <div class="title_container">
-                <span v-if="artifactId == 'LocalToMe'">LocalToMe</span>
-                <span v-if="artifactId == 'EvolveSite'">Evolve Site</span>
-                <span v-if="artifactId == 'DowcoConsultants'">Dowco Consultants</span>
-                <span v-if="artifactId == 'InnotaTechnologies'">Innota Technologies</span>
+                <span v-if="artifactId == 'LocalToMe'">LocalToMe<br>
+                    <h4 class="role">Frontend, Backend</h4>
+                </span>
+                <span v-if="artifactId == 'EvolveSite'">Evolve Site<br>
+                    <h4 class="role">Frontend, UI</h4>
+                </span>
+                <span v-if="artifactId == 'DowcoConsultants'">Dowco Consultants<br>
+                    <h4 class="role">Frontend, UI</h4>
+                </span>
+                <span v-if="artifactId == 'InnotaTechnologies'">Innota Technologies<br>
+                    <h4 class="role">Frontend, Backend, UX/UI</h4>
+                </span>
                 <!-- <div class="up_arrow_container"><img class="up_arrow" src="/assets/icons/arrowUp.svg" /></div> -->
             </div>
         </div>
@@ -111,23 +119,6 @@ export default {
 </script>
 
 <style scoped>
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-}
-
 #artifact {
     display: flex;
     flex-direction: row;
@@ -142,6 +133,12 @@ export default {
 .up_arrow_container {
     width: 35px;
     margin-top: 200px;
+}
+
+h4.role {
+    font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
+    margin: 2% 0 0 0;
+    opacity: 25%;
 }
 
 span {
@@ -171,8 +168,18 @@ span {
 }
 
 @media only screen and (max-width: 900px) {
+    #artifact::-webkit-scrollbar {
+        display: none;
+    }
+
     #artifact {
         flex-direction: column;
+        height: 100%;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
     }
 
     .title_container {

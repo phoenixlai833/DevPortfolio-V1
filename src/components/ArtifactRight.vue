@@ -3,9 +3,9 @@
 
 <template>
     <div id="ArtifactRight">
-    <div v-motion-fade class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
-    </div>
-    <!-- <div class="img-wrapper">
+        <div v-motion-fade class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+        </div>
+        <!-- <div class="img-wrapper">
                                                                                                                                                                                                                                                                                             <div id="prjPhoto" class="hero_image" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
                                                                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                                                                         </div> -->
@@ -29,7 +29,7 @@
         </div>
         <div v-motion-fade-visible class="demo_video">
             <iframe width="100%" height="100%" :src="demoVideo" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
                                                                     </iframe> -->
@@ -69,9 +69,14 @@
             <h4>Nice To Haves</h4>
             <div class="nicetohaves_description">
                 <p>{{ niceToHaves }}</p>
+            </div>
         </div>
-    </div>
-    <!-- <hr>
+        <!-- <div v-motion-fade-visible class="backtotop">
+            <button @click="scrollToTop">
+                <h4>Back to top </h4>
+            </button>
+        </div> -->
+        <!-- <hr>
         <div class="seemore">
             <h4>See More</h4>
             <div class="seemore_description">
@@ -123,18 +128,29 @@ export default {
     methods: {
         openLink(link) {
             window.open(link, "_blank");
-        }
+        },
+        // methods: {
+        //     scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
+        // }
     }
 };
 </script>
 
 <style scoped>
+#ArtifactRight::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
 
 #ArtifactRight {
     /* background-color: aqua; */
     width: 100%;
     height: 70vh;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
     /* scrollbar-color: red yellow; */
 }
 

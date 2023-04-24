@@ -22,8 +22,12 @@ div {
   transition: all 0.3s ease-in-out;
 }
 
+a:hover {
+  opacity: 100%;
+}
+
 div:hover {
-  opacity: 50%;
+  opacity: 75%;
   /* transition: all 0.3s ease-in-out; */
 }
 
