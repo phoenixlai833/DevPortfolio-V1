@@ -78,7 +78,7 @@ export default {
     margin-top: 5%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     .my_picture {
         height: 290px;
     }

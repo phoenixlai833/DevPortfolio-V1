@@ -16,6 +16,7 @@ export default {
 .section {
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 .oval {

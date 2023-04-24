@@ -17,7 +17,7 @@ import FilledButton from './FilledButton.vue';
     <a href="#Contact">
       <h4>Contact</h4>
     </a>
-    <a href="/resumePL_2023.pdf" target="blank">
+    <a href="/resume-Phoenix_Lai.pdf" target="blank">
       <FilledButton buttonText=" Résumé" />
     </a>
 
@@ -25,12 +25,12 @@ import FilledButton from './FilledButton.vue';
   <nav class="small_navBar">
     <div class="small_navBar_icon" @click="show = !show" @mouseover="show = true">
       <div class="ring_one" :style="{
-        height: show ? '35px' : '10px'
-      }">
+          height: show ? '35px' : '10px'
+        }">
       </div>
       <div class="ring_two" :style="{
-        height: show ? '35px' : '10px'
-      }">
+          height: show ? '35px' : '10px'
+        }">
       </div>
     </div>
     <Transition duration="550" name="menuDrop">
@@ -51,7 +51,7 @@ import FilledButton from './FilledButton.vue';
             </a>
           </div>
           <div class="right_menu_items">
-            <a href="/resumePL_2023.pdf">
+            <a href="/resume-Phoenix_Lai.pdf">
               <FilledButton buttonText="Résumé" />
             </a>
           </div>

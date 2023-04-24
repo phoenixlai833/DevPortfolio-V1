@@ -11,9 +11,11 @@
         <div class="large_feature_right">
             <div class="large_feature_title">
                 <div class="title_items">
-                    <h4>{{ itemNum }}&nbsp;&nbsp;&nbsp;Featured Work</h4>
+                    <h4>{{ itemNum }}&nbsp;&nbsp;&nbsp;Featured Work<span
+                            class="feature_work_role">&nbsp;&nbsp;/&nbsp;&nbsp;{{ role }}</span>
+                    </h4>
                     <div class="title_items_icons">
-                        <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social"
+                        <a v-if="githubLink" :href="githubLink" target="_blank"> <img class="social deployed"
                                 src="/assets/icons/github.svg" /></a>
                         <a v-if="siteLink" :href="siteLink" target="_blank"><img class="social"
                                 src="/assets/icons/eye.svg" /></a>
@@ -39,9 +41,11 @@
     <div class="small_feature_container">
         <div class="small_feature_title">
             <div class="title_items">
-                <h4>{{ itemNum }}&nbsp;&nbsp;&nbsp;Featured Work</h4>
+                <h4>{{ itemNum }}&nbsp;&nbsp;&nbsp;Featured Work<span class="feature_work_role">&nbsp;&nbsp;/&nbsp;&nbsp;{{
+                    role }}</span></h4>
                 <div class="title_items_icons">
-                    <a v-if="githubLink" :href="githubLink"> <img class="social" src="/assets/icons/github.svg" /></a>
+                    <a v-if="githubLink" :href="githubLink"> <img class="social deployed"
+                            src="/assets/icons/github.svg" /></a>
                     <a :href="siteLink"><img class="social" src="/assets/icons/eye.svg" /></a>
                 </div>
             </div>
@@ -71,7 +75,7 @@
 <script>
 export default {
     name: "FeaturedWork",
-    props: ["directionType", "imagePath", "itemNum", "githubLink", "siteLink", "inProgress", "title", "description", "technologies", "seeMoreLink"],
+    props: ["directionType", "imagePath", "itemNum", "role", "githubLink", "siteLink", "inProgress", "title", "description", "technologies", "seeMoreLink"],
     methods: {
         openLink(link) {
             window.open(link, "_blank");
@@ -81,6 +85,17 @@ export default {
 </script>
 
 <style scoped>
+h4 {
+    width: 100%
+}
+
+span.feature_work_role {
+    font-size: 1.6rem;
+    /* opacity: 50%; */
+    font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
+
+}
+
 span.projectTitle {
     font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
     opacity: 100%;
@@ -152,9 +167,13 @@ hr {
     margin-top: 5px;
 }
 
+.deployed {
+    margin-right: 30px;
+}
+
 .social {
     height: 20px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     transition: all 0.3s ease-in-out;
 }
 
@@ -162,10 +181,13 @@ hr {
     opacity: 50%;
 }
 
-.title_items {
+.title_items,
+.title_items_icons {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 .large_feature_info,
 .small_feature_info,
@@ -198,7 +220,7 @@ hr {
 .large_feature_container {
     display: flex;
     align-items: start;
-    margin: 10% 0;
+    margin: 0 0 10% 0;
 }
 
 .large_feature_right {
@@ -209,7 +231,8 @@ hr {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 900px) {
     .small_feature_link {
         max-width: 35%;
     }
@@ -233,7 +256,7 @@ hr {
 
     .small_feature_container {
         display: block;
-        margin: 10% 0;
+        margin: 0 0 15% 0;
     }
 
     .large_feature_container {
