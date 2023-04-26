@@ -20,11 +20,11 @@ import { RouterView } from 'vue-router'
 
     <div class="color-palette">
       <label for="sage"></label>
-      <h4>Sage</h4>
+      <h4>sage</h4>
       <label for="cream"></label>
       <h4>cream</h4>
       <label for="lilac"></label>
-      <h4>Lilac</h4>
+      <h4>lilac</h4>
     </div>
     <div class="container">
       <RouterView />
