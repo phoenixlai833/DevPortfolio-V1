@@ -144,14 +144,15 @@ export default {
 
 #ArtifactRight {
     /* background-color: aqua; */
-    width: 100%;
-    height: 70vh;
+    /* width: 100%; */
+    height: calc(100vh - 120px);
     overflow-y: scroll;
     -ms-overflow-style: none;
     /* Internet Explorer 10+ */
     scrollbar-width: none;
-    /* Firefox */
-    /* scrollbar-color: red yellow; */
+    margin-right: 30px;
+    padding: 10% 0 10% 0;
+
 }
 
 .seemore_projects_title {
@@ -377,15 +378,17 @@ p.overviews {
     }
 
     #ArtifactRight {
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
-        padding-bottom: 10%;
+        margin: 0 30px;
+        padding: 0 0 10% 0;
+        /* padding-bottom: 10%; */
     }
 }
 
-@media only screen and (min-width: 1400px) {
+/* @media only screen and (min-width: 1400px) {
     #ArtifactRight {
         height: 65vh;
     }
-}
+} */
 </style>

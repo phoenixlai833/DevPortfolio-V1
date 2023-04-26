@@ -14,6 +14,9 @@ import { useRoute } from "vue-router";
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
             <div class="title_container">
+                <span v-if="artifactId == 'InnotaTechnologies'">Innota Technologies<br>
+                    <h4 class="role">Frontend, Backend, UX/UI<br />(pass: InnotaIsAwesome2023)</h4>
+                </span>
                 <span v-if="artifactId == 'LocalToMe'">LocalToMe<br>
                     <h4 class="role">Frontend, Backend</h4>
                 </span>
@@ -22,9 +25,6 @@ import { useRoute } from "vue-router";
                 </span>
                 <span v-if="artifactId == 'DowcoConsultants'">Dowco Consultants<br>
                     <h4 class="role">Frontend, UI</h4>
-                </span>
-                <span v-if="artifactId == 'InnotaTechnologies'">Innota Technologies<br>
-                    <h4 class="role">Frontend, Backend, UX/UI</h4>
                 </span>
                 <!-- <div class="up_arrow_container"><img class="up_arrow" src="/assets/icons/arrowUp.svg" /></div> -->
             </div>
@@ -147,14 +147,17 @@ span {
 }
 
 .title_container {
-    width: 80%;
+    /* width: 80%; */
     overflow-wrap: break-word;
 }
 
 .leftside {
+    /* outline: solid 1px black; */
     /* display: flex; */
     /* flex-direction: row; */
     width: 30%;
+    padding: 5%;
+    /* height: 100%; */
     /* height: 72vh; */
     /* overflow-y: hidden; */
     display: flex;
@@ -182,13 +185,19 @@ span {
         /* Firefox */
     }
 
+    span {
+    font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
+    font-size: 4rem;
+}
+
     .title_container {
         margin-top: 10%;
         /* width: 75%; */
     }
 
     .leftside {
-        margin: 5% 0;
+        margin-top: 5%;
+        padding: 30px;
         width: 100%;
         /* height: 30vh; */
         display: block;

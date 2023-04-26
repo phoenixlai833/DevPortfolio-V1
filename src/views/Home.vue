@@ -58,6 +58,11 @@ export default {
 </script>
 
 <style scoped>
+#Home {
+    padding: 7%;
+    /* margin: 7%; */
+}
+
 .bottom_circle_spacer {
     width: 100%;
     /* height: 0; */
@@ -226,6 +231,10 @@ export default {
 }
 
 @media only screen and (max-width: 768px) {
+
+    #Home {
+        padding: 4vw;
+    }
 
 
     .circle_four {

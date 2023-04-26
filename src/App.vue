@@ -18,17 +18,17 @@ import { RouterView } from 'vue-router'
   <div class="page-wrapper">
     <NavBar />
 
-  <div class="color-palette">
-    <label for="sage"></label>
-    <h4>Sage</h4>
-    <label for="cream"></label>
-    <h4>cream</h4>
-    <label for="lilac"></label>
-    <h4>Lilac</h4>
-  </div>
-  <div class="container">
-    <RouterView />
-    <!-- <Home />
+    <div class="color-palette">
+      <label for="sage"></label>
+      <h4>Sage</h4>
+      <label for="cream"></label>
+      <h4>cream</h4>
+      <label for="lilac"></label>
+      <h4>Lilac</h4>
+    </div>
+    <div class="container">
+      <RouterView />
+      <!-- <Home />
                 <div class="diamond_spacer"><img class="diamond" src="/assets/icons/diamond.svg" /></div>
                     <SectionTitle titleText="Projects" />
                     <Projects />
@@ -170,7 +170,7 @@ export default {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   scroll-behavior: smooth;
-  padding: 7%;
+  /* padding: 7%; */
   z-index: 1;
 }
 
@@ -251,8 +251,8 @@ export default {
     height: 35vh;
   }
 
-  .container {
+  /* .container {
     padding: 4vw;
-  }
+  } */
 }
 </style>
