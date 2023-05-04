@@ -17,11 +17,7 @@ const router = createRouter({
         {
             path: '/artifact/:id',
             name: 'Artifact',
-            component: () => import('./views/Artifact.vue'),
-            // beforeEnter(to) {
-            //     const id = parseInt(to.params.id)
-            //     // can use json and loop through here to check is exists but only 4 for its fine
-            // }
+            component: () => import('./views/Artifact.vue')
         },
         {
             path: "/:pathMatch(.*)*",
@@ -31,7 +27,6 @@ const router = createRouter({
 
     ],
     scrollBehavior(to, from, savedPosition) {
-        // let position = { x: 0, y: 0 }
         if (to.hash) {
             router.push("/")
             return {
@@ -51,7 +46,6 @@ app.use(router)
 
 app.use(MotionPlugin)
 
-// app.mount('#app')
 router.isReady().then(() => {
     app.mount('#app')
 })

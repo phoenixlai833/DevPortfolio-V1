@@ -136,7 +136,7 @@ export default {
 }
 
 .small_my_name {
-    font-family: "Kozuka-Mincho-Pro-L.ttf", serif;
+    font-family: "Kozuka-Mincho-Pro-L", serif;
     font-size: 13vw;
     line-height: 10vw;
 }
@@ -147,7 +147,7 @@ export default {
 }
 
 .my_name {
-    font-family: "Kozuka-Mincho-Pro-L.ttf", serif;
+    font-family: "Kozuka-Mincho-Pro-L", serif;
     font-size: 12.8rem;
     line-height: 100px;
 }

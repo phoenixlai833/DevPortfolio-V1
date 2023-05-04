@@ -103,19 +103,6 @@ export default {
   transform: translateY(-100%);
 }
 
-/* .notShown {
-visibility: hidden;
-} */
-
-/* .small_navBar_icon:hover+.small_navBar_dropdown .left_menu_items,
-.small_navBar_icon:hover+.small_navBar_dropdown .right_menu_items {
-display: block;
-}
-
-.small_navBar_icon:hover+.small_navBar_dropdown {
-height: auto;
-padding: 5% 0;
-} */
 
 .left_menu_items h4 {
   margin-top: 15px;
@@ -127,7 +114,6 @@ padding: 5% 0;
 
 .right_menu_items,
 .left_menu_items {
-  /* display: none; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -140,27 +126,17 @@ padding: 5% 0;
 .small_navBar_dropdown {
   width: 100%;
   height: auto;
-  /* height: 0; */
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--theme-color);
   z-index: 2;
   border-bottom: 1px solid black;
-  /* display: flex;
-justify-content: space-between;
-align-items: end; */
-  /* transform: translateY(10px); */
-  /* animation: 3s linear 1s slideDown; */
-  /* padding: 0; */
-  /* transition: all 0.3s ease-in-out; */
   padding: 5% 0;
-  /* margin-left: 2vw; */
 }
 
 .ring_two {
   width: 35px;
-  /* height: 10px; */
   border: 1px solid black;
   border-radius: 50%;
   position: fixed;
@@ -186,11 +162,6 @@ align-items: end; */
   transition: all 0.3s ease-in-out;
 }
 
-/* .small_navBar_icon:hover .ring_one,
-.small_navBar_icon:hover .ring_two {
-width: 35px;
-height: 35px;
-} */
 
 .small_navBar_icon {
   z-index: 3;

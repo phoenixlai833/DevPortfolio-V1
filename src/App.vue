@@ -1,10 +1,5 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
-// import SectionTitle from './components/SectionTitle.vue';
-// import Home from './components/Home.vue';
-// import Projects from './components/Projects.vue';
-// import About from './components/About.vue';
-// import Contact from './components/Contact.vue';
 import Loading from "./components/Loading.vue";
 import { RouterView } from 'vue-router'
 </script>
@@ -28,18 +23,6 @@ import { RouterView } from 'vue-router'
     </div>
     <div class="container">
       <RouterView />
-      <!-- <Home />
-                <div class="diamond_spacer"><img class="diamond" src="/assets/icons/diamond.svg" /></div>
-                    <SectionTitle titleText="Projects" />
-                    <Projects />
-                    <SectionTitle titleText="About" />
-                    <About />
-                    <div class="pentagon_spacer"><img class="pentagon" src="/assets/icons/pentagon.svg" /></div>
-                    <SectionTitle titleText="Contact" />
-                    <Contact />
-                    <div class="bottom_circle_spacer">
-                      <div class="circle_four"></div>
-                    </div> -->
     </div>
     <div class="border_left_top"></div>
     <div class="border_left_bottom"></div>
@@ -60,7 +43,6 @@ import { RouterView } from 'vue-router'
 export default {
   components: {
     Loading
-    // , Home, Projects, About, Contact
   },
   data() {
     return {
@@ -76,6 +58,36 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Lato-Regular";
+  src: local("Nunito"),
+    url('/assets/fonts/Lato-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: local("Nunito"),
+    url('/assets/fonts/Lato-Thin.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: local("Nunito"),
+    url('/assets/fonts/Lato-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Black";
+  src: local("Nunito"),
+    url('/assets/fonts/Lato-Black.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Kozuka-Mincho-Pro-L";
+  src: local("Nunito"),
+    url('/assets/fonts/Kozuka-Mincho-Pro-L.ttf') format("truetype");
+}
+
 .noise::before {
   position: fixed;
   top: 0;
