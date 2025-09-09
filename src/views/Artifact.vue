@@ -6,7 +6,7 @@ import { useRoute } from "vue-router";
 
 <template>
     <div id="artifact"
-        v-if="artifactId == 'LocalToMe' || artifactId == 'EvolveSite' || artifactId == 'DowcoConsultants' || artifactId == 'InnotaTechnologies'">
+        v-if="artifactId == 'BCHomeEnergyPlanner' || artifactId == 'ProperateStudio3D' || artifactId == 'DowcoConsultants' || artifactId == 'InnotaTechnologies'">
         <div v-motion-fade class="leftside">
             <!-- <div class="back_arrow_container" @click="$router.go(-1)"><img class="back_arrow"
                                                                                                                                                                                                                                                                                                                                                                                                                                             src="/assets/icons/arrowLeft.svg" /></div> -->
@@ -14,14 +14,14 @@ import { useRoute } from "vue-router";
                 <div class="back_arrow_container"><img class="back_arrow" src="/assets/icons/arrowLeft.svg" /></div>
             </a>
             <div class="title_container">
-                <span v-if="artifactId == 'InnotaTechnologies'">Innota Technologies<br>
-                    <h4 class="role">Frontend, Backend, UX/UI<br />(pass: InnotaIsAwesome2023)</h4>
-                </span>
-                <span v-if="artifactId == 'LocalToMe'">LocalToMe<br>
+                <span v-if="artifactId == 'BCHomeEnergyPlanner'">BC Home Energy Planner<br>
                     <h4 class="role">Frontend, Backend</h4>
                 </span>
-                <span v-if="artifactId == 'EvolveSite'">Evolve Site<br>
-                    <h4 class="role">Frontend, UI</h4>
+                <span v-if="artifactId == 'ProperateStudio3D'">Properate Studio3D<br>
+                    <h4 class="role">Frontend</h4>
+                </span>
+                <span v-if="artifactId == 'InnotaTechnologies'">Innota Technologies<br>
+                    <h4 class="role">Frontend, Backend, UX/UI<br />(pass: InnotaIsAwesome2023)</h4>
                 </span>
                 <span v-if="artifactId == 'DowcoConsultants'">Dowco Consultants<br>
                     <h4 class="role">Frontend, UI</h4>
@@ -30,60 +30,39 @@ import { useRoute } from "vue-router";
             </div>
         </div>
         <div class="rightside">
-            <div v-if="artifactId == 'LocalToMe'">
-                <ArtifactRight heroImage="/assets/images/f2-LocalToMe.png"
-                    githubLink="https://github.com/phoenixlai833/LocalToMe" siteLink="https://localtome.vercel.app/"
-                    context="As part of the ISDP(Interdisciplinary Student Project)  program at BCIT, I worked in a team of three designers and three developers on a project that involved ideating a need for underrepresented groups and developing an app that would provide value and assistance to them. Our task was to start from the ideation stage and work towards a working MVP. After careful consideration, we decided to focus on food resources for low-income families and individuals, especially in light of the impact of COVID-19. Our team wanted to create a user-friendly app that would provide easy access to essential resources for those who require food assistance."
-                    :technologies="['React', 'Next.js', 'Firebase', 'Styled Components', 'Vercel']"
-                    demoVideo="https://www.youtube.com/embed/_M4DFhkupf0"
-                    challengeBig="Our research indicated that those who have used the service previously are the ones who contribute the most to food banks and other food aid resources."
-                    challengeSmall="Access to food resources can be challenging to navigate and often come with restrictions or certain qualifications. This includes resources such as food banks, community fridges, meal programs, and food drives. Our aim was to make information centralized and easily accessible to those in need by providing a filterable map of all resources using an API provided by the City of Vancouver. Clicking on the pins on the map will provide further information on each resource, including contact information, eligibility criteria, and directions. We also wanted to promote community in a time of uncertainty and incorporated the ability for signed-in users to create events and news related to community food programs. Users can also customize their profiles and favorite food resources and events for later viewing. Our research indicated that those who have used the service previously are the ones who contribute the most to food banks and other food resources. As part of our efforts to foster community and abundance, we created a mascot called Cabbage, which symbolizes resilience and abundance, much like the vegetable it is named after."
-                    solutionBig="The project faced challenges in managing the scope and timeline, obtaining information from food banks, and utilizing unfamiliar technologies."
-                    solutionSmall="We faced several challenges during the project, including difficulty in sizing the scope and managing the project within our design, development, and testing timeline while balancing other schoolwork. Another challenge was obtaining sufficient information and cooperation from understaffed and busy food banks. Additionally, we wanted to incorporate new technologies such as Firebase, which we were unfamiliar with, so we had to learn and implement them simultaneously. Despite these challenges, we were able to successfully develop the app, thanks to our perseverance and dedication to the project."
-                    img1="/assets/images/LocalToMe/l-1.png" img2="/assets/images/LocalToMe/l-3.png"
-                    img3="/assets/images/LocalToMe/l-4.png" img4="/assets/images/LocalToMe/l-2.png"
-                    takeawaysBig="We learned the importance of choosing the right technology through the challenge of using a NoSQL database for an application with unclearly defined access patterns."
-                    takeawaysSmall="From the project, we learned the importance of selecting the right technology that aligns with our needs, as opting for Firebase's NoSQL database proved to be a challenge for the nature of the application. We also realized that having a clear definition of the access pattern at the outset is crucial as our development and design timelines overlapped. This led to having to manually manage CRUD operations on related endpoints individually every time."
-                    niceToHaves="With more time we wanted to incorporate different account types for organizers and users, a validation system for accounts to build user trust, a detailed questionnaire during user account creation for more personalized resource recommendations, and a live update feature for food banks to update their profiles on the map in real-time to ensure users receive the most current information available."
-                    prj1="/assets/images/f4-InnotaTech.png" prj2="/assets/images/f1-Evolve.png"
-                    prj3="/assets/images/f3-Dowco.png" />
+            <div v-if="artifactId == 'BCHomeEnergyPlanner'">
+                <ArtifactRight heroImage="/assets/images/Bchep/b-hero.webp" siteLink="https://bchomeenergyplanner.ca/"
+                    context="The BC government engaged Properate, a company specializing in environmental building science, energy modeling, and retrofits, to create the BC Home Energy Planner—a digital tool that helps residents understand and improve their home’s energy efficiency. The goal was to provide accurate, actionable energy reports with minimal user input, supporting retrofit planning, rebate access, and climate resilience."
+                    :technologies="['Vue', 'Nuxt', 'Firebase']"
+                    demoVideo="https://www.youtube.com/embed/K4eEaYYhwkc?si=YLugAkW3X7szfqwz"
+                    solutionBig="The main challenge was translating complex energy modeling and diverse climate and building data into a minimal-input, user-friendly tool while meeting strict government standards."
+                    solutionSmall="Developing the BC Home Energy Planner required balancing technical complexity with an accessible user experience. One major challenge was translating sophisticated energy modeling calculations—normally requiring extensive data and expertise—into a tool that could generate accurate home energy reports with minimal user input. Integrating diverse datasets, including climate records, geographic information, and building specifications, demanded careful planning to ensure reliability and consistency across different home types and locations. Additionally, close collaboration with BC government stakeholders was critical, as policy requirements and energy standards had to be reflected precisely in the platform. Coordinating these technical, data, and stakeholder requirements while maintaining a smooth, intuitive interface pushed the team to innovate both in frontend design and backend architecture, ensuring that the tool would be practical, accurate, and easy for residents to use."
+                    challengeBig="Create a planner that delivers intuitive, data-driven energy assessments for homeowners and renters, simplifying complex energy modeling into actionable insights and connecting users to government incentives and certified contractors."
+                    challengeSmall="The BC Home Energy Planner provides residents with clear, data-driven insights into their home’s energy performance, translating complex modeling into simple, actionable recommendations. Users receive personalized energy scores, retrofit guidance, rebate information, and connections to certified contractors, enabling them to reduce energy costs and greenhouse gas emissions. The tool’s minimal-input design increases accessibility for a wide range of households, from renters to single-family homeowners, while the integration of climate and map data ensures reports are accurate and relevant. By bridging technical precision with an intuitive user experience, the platform empowers British Columbians to make informed decisions about energy efficiency and climate resilience."
+                    img1="/assets/images/Bchep/b-1.png" img2="/assets/images/Bchep/b-2.png"
+                    img3="/assets/images/Bchep/b-3.png" img4="/assets/images/Bchep/b-4.webp"
+                    takeawaysBig="Bridged complex energy modeling with an intuitive interface, delivering actionable insights that empower users and support government energy efficiency goals."
+                    takeawaysSmall="This project reinforced the importance of bridging complex technical systems with intuitive user experiences, showing how thoughtful design and close collaboration with stakeholders can turn sophisticated data into actionable insights that empower users and drive real-world impact."
+                    niceToHaves="An opportunity for growth is expanding coverage to apartment buildings and embedding the energy rating system in new construction, broadening its influence on sustainable housing." />
             </div>
-            <div v-if="artifactId == 'EvolveSite'">
-                <ArtifactRight heroImage="/assets/images/f1-Evolve.png" siteLink="https://evolve-website-a0510.web.app/"
-                    context="At Evolve Branding, and later as a freelancer during the school year, I helped develop their new agency site using Flutter. The project started a few years prior, with the initial design language and a few page designs confirmed. Although various developers had worked on it previously, only minor features had been created. There was a need for more progress so additional pages had to be designed and developed, as well as features that needed to be updated. I worked with another developer remotely, reported to the CEO for regular check-ins and made significant progress to deliver a functional aesthetically pleasing site for the agency."
-                    :technologies="['Flutter', 'Firebase', 'Android Studios']"
-                    demoVideo="https://www.youtube.com/embed/eCuiXQdurKY"
-                    challengeBig="Despite a lack of experience in Dart or Flutter, through online resources, I was able to learn and work on the Evolve Branding project effectively. "
-                    challengeSmall="Although I had no prior knowledge of coding in Dart or using the Flutter framework, I taught myself and quickly gained enough proficiency to contribute to the project. I designed and developed additional pages such as the all works, case study page template, and mega menu. I also made sure that all pages were responsive, ensuring optimal user experience across all devices. To maintain communication and provide regular updates, I worked with the CEO and another developer through Github, Slack, and Discord. This allowed us to collaborate effectively and ensure that the project was progressing on track and to the satisfaction of the CEO."
-                    solutionBig="Due to unfamiliarity with the language and framework, disorganized code base, and time constraints, I encountered obstacles but overcame and learned from them."
-                    solutionSmall="While developing the web app, I encountered several challenges. Firstly, since I was not as familiar with the language and framework used, it took longer to find solutions to certain problems, but this also allowed me to learn and grow. Secondly, the code base lacked structure and coding standards as it had been previously handled by different developers, making it challenging to work with and maintain consistency. Finally, the need to make progress quickly resulted in additional difficulties while working with the code."
-                    img1="/assets/images/Evolve/e-2.png" img2="/assets/images/Evolve/e-3.png"
-                    img3="/assets/images/Evolve/e-4.png" img4="/assets/images/Evolve/e-1.png"
-                    takeawaysBig="Regular communication, establishing coding standards, and seeking help when needed are essential lessons learned from the project."
-                    takeawaysSmall="Throughout the project, I learned the importance of regular communication and timely updates to all parties involved to ensure that everyone is on the same page. Additionally, having a common coding standard in place would have greatly eased the development process and made maintenance much simpler. I also realized the benefits of asking for help when needed, as this helped to speed up the workflow and allowed me to learn from my colleagues. Overall, these takeaways were invaluable and will be helpful in future projects."
-                    niceToHaves="Unfortunately, due to a heavy workload with school, I had to stop freelancing on the project, but I would have loved to continue working on all the individual case study pages, menu pages, and perfecting the responsiveness of the site. With additional time, I would have also prioritized refactoring and reorganizing the codebase to make it more manageable for future developers."
-                    prj1="/assets/images/f2-LocalToMe.png" prj2="/assets/images/f3-Dowco.png"
-                    prj3="/assets/images/f1-Evolve.png" />
-            </div>
-            <div v-if="artifactId == 'DowcoConsultants'">
-                <ArtifactRight heroImage="/assets/images/f3-Dowco.png" siteLink="https://www.dowco.com/"
-                    context="During my internship at Evolve Branding, I was involved in a project for one of their major clients, The Dowco Group of Companies. Dowco is a renowned detail engineering firm that has contributed to some of the world's most famous buildings, including the One World Trade Center, the Walt Disney Concert Hall, and Hudson Yards. Evolve had previously helped Dowco rebrand their business, but it has been a few years since their last website update. For this project, I was tasked to update the homepage and mega menu to better reflect the scope of their business and provide a more modern, clean user experience. We worked closely with Dowco to deliver a website that accurately represented their brand and showcased their impressive portfolio of work."
-                    :technologies="['HTML', 'SCSS', 'JavaScript', 'jQuery', 'PHP']"
-                    demoVideo="https://www.youtube.com/embed/xFAafo2JlCs"
-                    challengeBig="The project involved participating in meetings, researching, ideating based on the existing branding, designing and developing responsive pages, and working with a large codebase."
-                    challengeSmall="I participated in client meetings, where I carefully listened to their needs and concerns, researched their competitors, and took feedback from the CEO. Based on the existing branding, I came up with ideas to create a modern and updated look and created prototypes in Figma. When designing and developing the pages, I made sure that they were all responsive and could be easily accessed on mobile devices. I worked with a large codebase that had different styles of implementation due to it being passed around developers. To fit the codebase, I used HTML, SCSS, and Javascript, and created the homepage in isolation to avoid potential conflicts in CSS. Finally, I relinked all the menu, footer, and homepage items with the new design and deployed the changes via client's server."
-                    solutionBig="Disorganization, inconsistency, and previous varying development approaches posed challenges for making changes to the site."
-                    solutionSmall="During the project, I faced several challenges such as dealing with a disorganized folder and files, the lack of standardization due to different developers working on the code at various times, and the need to make changes carefully to avoid breaking other parts of the site. Furthermore, the implementation of the menu varied across pages using PHP, JQuery, or plain HTML, which required me to understand how the files worked together and adjust accordingly."
-                    img1="/assets/images/Dowco/d-4.png" img2="/assets/images/Dowco/d-3.png"
-                    img3="/assets/images/Dowco/d-1.png" img4="/assets/images/Dowco/d-2.png"
-                    takeawaysBig="Adopting a coding standard can significantly improve the quality of the code, and understanding the client's business needs is crucial."
-                    takeawaysSmall="Through the process of completing the project, I learned that having a coding standard and implementing regular code reviews is crucial for efficient development and maintenance. Consistency in coding practices ensures that the code is easier to understand, debug, and update, making it easier for developers to work on the project. Additionally, I feel that understanding the client's business needs is vital to ensuring their satisfaction. By communicating effectively and listening carefully to their requirements, we were able to provide a customized solution that met their needs and exceeded their expectations."
-                    niceToHaves="" prj1="/assets/images/f2-LocalToMe.png" prj2="/assets/images/f1-Evolve.png"
-                    prj3="/assets/images/f1-Evolve.png" />
+            <div v-if="artifactId == 'ProperateStudio3D'">
+                <ArtifactRight heroImage="/assets/images/f2-studio3D.png" siteLink="https://properate.io/stride"
+                    context="Properate, a climate-tech company specializing in energy modeling and building retrofits, created Stride—a mobile platform that allows HVAC professionals to size and plan heat pump installations more efficiently. The BC government and private contractors needed a solution to accelerate energy-efficient retrofits without sacrificing accuracy. I contributed to developing the web component of Stride, which connects user data from mobile scans to an interactive, browser-based interface, enabling full 3D model manipulation and F280-compliant heat load reporting."
+                    :technologies="['Vue', 'Nuxt', 'Three.js', 'Tailwind']"
+                    demoVideo="https://www.youtube.com/embed/wvjtU-SVwi0?si=dcG6wA9n-vD38Odu"
+                    challengeBig="Built a web platform to manage, refine, and simulate home energy models seamlessly."
+                    challengeSmall="I took part in developing the web interface where users’ LiDAR scans are automatically uploaded into their profiles. Users can view, edit, and refine 3D home models, add or modify entities and project data, and simulate changes to generate CSA F280-compliant heat load reports. The platform integrates mobile field data with interactive modeling tools, providing HVAC professionals with a complete workflow to plan and size retrofits efficiently while maintaining accuracy and compliance."
+                    solutionBig="Bridging complex modeling data with a user-friendly interface for professionals in the field."
+                    solutionSmall="A key challenge was transforming detailed LiDAR and energy modeling data into an intuitive web experience. The system needed to handle large 3D datasets, allow real-time edits and simulations, and maintain compliance with CSA F280 standards. Additionally, integrating user data from the mobile app into a responsive web interface required careful backend coordination and strong collaboration with both internal teams and external stakeholders to ensure accuracy, usability, and workflow efficiency."
+                    img1="/assets/images/Studio3D/s-1.png" img2="/assets/images/Studio3D/s-2.png"
+                    img3="/assets/images/Studio3D/s-3.png" img4="/assets/images/Studio3D/s-4.png"
+                    takeawaysBig="Bridging technical precision and usability empowers professionals and improves workflow efficiency."
+                    takeawaysSmall="This project reinforced the value of connecting sophisticated technical systems with intuitive interfaces. By translating complex 3D scans and energy models into actionable tools, we enabled HVAC professionals to make precise decisions quickly, improving project efficiency and client outcomes. The experience highlighted the importance of collaboration between developers, designers, and stakeholders to deliver tools that balance accuracy, usability, and real-world impact."
+                    niceToHaves="Future improvements could include collaborative features that allow multiple team members or stakeholders to work on the same 3D home model in real time. This would improve workflow efficiency, ensure consistency across edits, and enable HVAC professionals and project teams to make faster, coordinated decisions, ultimately enhancing the impact and usability of Stride/Studio." />
             </div>
             <!-- inProgress="true" -->
             <div v-if="artifactId == 'InnotaTechnologies'">
-                <ArtifactRight heroImage="/assets/images/f4-InnotaTech.png" siteLink="https://innota-tech.up.railway.app/"
+                <ArtifactRight heroImage="/assets/images/f3-InnotaTech.png" siteLink="https://innota-tech.up.railway.app/"
                     context="In my last semester at BCIT, I participated in the ISSP(Industry Sponsored Student Projects) program in a team of four classmates. We chose to work with Innota Technologies, a startup that aims to develop an educational note-taking app with a Figma-like interface. Together, we scoped out an MVP that was feasible within the given timeline and added additional features with any remaining time. After discussions with the client, we focused on building out the main note-taking functionality for phase 1, which included a split-screen with one side as the PDF reader and the other as a canvas. The scope was limited to restricting uploads to PDFs only and focusing on the desktop browser version, although we made it responsive with the extra time. Since this was a new project, we had to start from scratch with no existing design or prototype. We worked in a SCRUM-like setting, using Trello and Slack, and met weekly with the client to provide updates and ensure that we were on track with the project's direction."
                     :technologies="['React', 'MVC', 'MongoDB', 'Docker']"
                     demoVideo="https://www.youtube.com/embed/TYhk05ouNJA"
@@ -99,7 +78,22 @@ import { useRoute } from "vue-router";
                     prj1="/assets/images/f2-LocalToMe.png" prj2="/assets/images/f1-Evolve.png"
                     prj3="/assets/images/f3-Dowco.png" />
             </div>
-
+            <div v-if="artifactId == 'DowcoConsultants'">
+                <ArtifactRight heroImage="/assets/images/f4-Dowco.png" siteLink="https://www.dowco.com/"
+                    context="During my internship at Evolve Branding, I was involved in a project for one of their major clients, The Dowco Group of Companies. Dowco is a renowned detail engineering firm that has contributed to some of the world's most famous buildings, including the One World Trade Center, the Walt Disney Concert Hall, and Hudson Yards. Evolve had previously helped Dowco rebrand their business, but it has been a few years since their last website update. For this project, I was tasked to update the homepage and mega menu to better reflect the scope of their business and provide a more modern, clean user experience. We worked closely with Dowco to deliver a website that accurately represented their brand and showcased their impressive portfolio of work."
+                    :technologies="['HTML', 'SCSS', 'JavaScript', 'jQuery', 'PHP']"
+                    demoVideo="https://www.youtube.com/embed/xFAafo2JlCs"
+                    challengeBig="The project involved participating in meetings, researching, ideating based on the existing branding, designing and developing responsive pages, and working with a large codebase."
+                    challengeSmall="I participated in client meetings, where I carefully listened to their needs and concerns, researched their competitors, and took feedback from the CEO. Based on the existing branding, I came up with ideas to create a modern and updated look and created prototypes in Figma. When designing and developing the pages, I made sure that they were all responsive and could be easily accessed on mobile devices. I worked with a large codebase that had different styles of implementation due to it being passed around developers. To fit the codebase, I used HTML, SCSS, and Javascript, and created the homepage in isolation to avoid potential conflicts in CSS. Finally, I relinked all the menu, footer, and homepage items with the new design and deployed the changes via client's server."
+                    solutionBig="Disorganization, inconsistency, and previous varying development approaches posed challenges for making changes to the site."
+                    solutionSmall="During the project, I faced several challenges such as dealing with a disorganized folder and files, the lack of standardization due to different developers working on the code at various times, and the need to make changes carefully to avoid breaking other parts of the site. Furthermore, the implementation of the menu varied across pages using PHP, JQuery, or plain HTML, which required me to understand how the files worked together and adjust accordingly."
+                    img1="/assets/images/Dowco/d-4.png" img2="/assets/images/Dowco/d-3.png"
+                    img3="/assets/images/Dowco/d-1.png" img4="/assets/images/Dowco/d-2.png"
+                    takeawaysBig="Adopting a coding standard can significantly improve the quality of the code, and understanding the client's business needs is crucial."
+                    takeawaysSmall="Through the process of completing the project, I learned that having a coding standard and implementing regular code reviews is crucial for efficient development and maintenance. Consistency in coding practices ensures that the code is easier to understand, debug, and update, making it easier for developers to work on the project. Additionally, I feel that understanding the client's business needs is vital to ensuring their satisfaction. By communicating effectively and listening carefully to their requirements, we were able to provide a customized solution that met their needs and exceeded their expectations."
+                    niceToHaves="" prj1="/assets/images/f2-LocalToMe.png" prj2="/assets/images/f1-Evolve.png"
+                    prj3="/assets/images/f1-Evolve.png" />
+            </div>
         </div>
     </div>
     <div v-else>
@@ -186,9 +180,9 @@ span {
     }
 
     span {
-    font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
-    font-size: 4rem;
-}
+        font-family: "Lato-Thin", Avenir, Helvetica, Arial, sans-serif;
+        font-size: 4rem;
+    }
 
     .title_container {
         margin-top: 10%;

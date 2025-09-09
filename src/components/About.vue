@@ -15,8 +15,7 @@
                     design to create user-centered products and experiences that are both functional and beautiful.</b>
                 <br />
                 <br />
-                As I finish my
-                final semester, I'm excited to explore the endless possibilities of coding, where creativity has no bounds
+                I'm excited to explore the endless possibilities of coding, where creativity has no bounds
                 and there is always more to learn.
             </p>
         </div>

@@ -31,8 +31,8 @@ import Contact from '../components/Contact.vue';
             </div>
             <div class="home_s2_right">
                 <div class="sloganContainer">
-                    <span class="slogan">I love to break and build things.</span>
-                    <h3>Welcome, I am a full-stack web developer and experiential designer with a focus on
+                    <span class="slogan">Let's break and build things.</span>
+                    <h3>Welcome, I am a web developer and experiential designer with a focus on
                         front-end development.</h3>
                 </div>
             </div>
